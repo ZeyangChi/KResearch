@@ -78,7 +78,7 @@ const operationToRestMethod: Record<string, string> = {
 };
 
 // The core executor with retry logic, now using `fetch` instead of the SDK
-async function executeWithRetry(operationName: string, params: any): Promise<any> {
+async function executeWithRetry(operationName: string, params: any, signal?: AbortSignal): Promise<any> {
     const keys = apiKeyService.getApiKeys();
     if (keys.length === 0) {
         throw new Error("No API keys provided. Please add at least one key in the application settings.");
@@ -109,7 +109,8 @@ async function executeWithRetry(operationName: string, params: any): Promise<any
             const response = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
-                body: JSON.stringify(body)
+                body: JSON.stringify(body),
+                signal
             });
 
             const responseText = await response.text();
@@ -138,10 +139,15 @@ async function executeWithRetry(operationName: string, params: any): Promise<any
 
             console.log(`[API Success] Operation: ${operationName}`);
             console.log(`[API Response]:`, sanitizeForLogging(sdkLikeResponse));
-            apiKeyService.reset(); // Reset key rotation for next independent operation
+            // 使用延迟重置，让连续调用能够使用不同的密钥，避免速率限制
+            apiKeyService.delayedReset(5000); // 延迟5秒后重置，给连续调用留出时间
             return sdkLikeResponse;
 
         } catch (error: any) {
+            if (error.name === 'AbortError') {
+                console.log(`[API Call Aborted] Operation: '${operationName}' was aborted by the user.`);
+                throw error;
+            }
             const errorMessage = getCleanErrorMessage(error);
             console.warn(`[API Call Failed: Attempt ${attempt}/${maxAttempts}] Operation: '${operationName}' with key ...${key.slice(-4)}. Error: ${errorMessage}`);
             lastError = error;
@@ -181,8 +187,8 @@ async function executeWithRetry(operationName: string, params: any): Promise<any
 // A simplified `ai` object that uses our fetch-based retry logic
 export const ai = {
     models: {
-        generateContent: (params: any): Promise<any> => {
-            return executeWithRetry('generateContent', params);
+        generateContent: (params: any, signal?: AbortSignal): Promise<any> => {
+            return executeWithRetry('generateContent', params, signal);
         },
         // Other methods like generateContentStream, generateImages, and chats are not used
         // by the app and are omitted to avoid implementing their fetch-based logic.

@@ -63,14 +63,34 @@ The user wants to research the impact of recent advancements in large language m
     
     const contents = history.map((turn, index) => {
         const parts: ({ text: string } | { inlineData: { mimeType: string; data: string } })[] = [{ text: turn.content }];
-        // Add research file
+        
+        // Handle the main research file attachment
         if (turn.role === 'user' && index === 0 && fileData) {
-            parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
+            if (fileData.extractedText) {
+                const fileContext = `\n\n--- Attached File Content (${fileData.name}) ---\n${fileData.extractedText}`;
+                const firstPart = parts[0];
+                if ('text' in firstPart) {
+                    firstPart.text += fileContext;
+                }
+            }
+            else if (fileData.mimeType.startsWith('image/')) {
+                parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
+            }
         }
-        // Add role file
+
+        // Handle the file attached to a Role
         if (turn.role === 'user' && index === 0 && role?.file) {
-            parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+            if (role.file.extractedText) {
+                const roleFileContext = `\n\n--- Attached Role File Content (${role.file.name}) ---\n${role.file.extractedText}`;
+                const firstPart = parts[0];
+                if ('text' in firstPart) {
+                    firstPart.text += roleFileContext;
+                }
+            } else if (role.file.mimeType.startsWith('image/')) {
+                parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+            }
         }
+
         return { role: turn.role, parts: parts };
     });
 
@@ -88,6 +108,12 @@ The user wants to research the impact of recent advancements in large language m
         console.error("Clarification Step 1 failed: No text was generated.");
         return { type: 'summary', content: `AI clarification failed. Proceeding with original query: ${history[0].content}` };
     }
+
+    // --- 添加调用间隔以避免API速率限制 ---
+    // 根据研究模式调整延迟时间：深度研究模式需要更长延迟
+    const delayMs = mode === 'DeepDive' ? 3000 : mode === 'Balanced' ? 2000 : 1500;
+    console.log(`Clarification Step 1 completed. Adding ${delayMs}ms delay before Step 2 to prevent rate limiting (mode: ${mode})...`);
+    await new Promise(resolve => setTimeout(resolve, delayMs));
 
     // --- STEP 2: Format the generated text into a structured JSON object ---
     const formattingPrompt = `Analyze the following text and classify it.
@@ -108,6 +134,7 @@ Text to analyze: "${generatedText}"
         required: ['type', 'content']
     };
 
+    console.log("Starting Clarification Step 2 (JSON formatting)...");
     const formattingResponse = await ai.models.generateContent({
         model: 'gemini-2.5-flash',
         contents: formattingPrompt,

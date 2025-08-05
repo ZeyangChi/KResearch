@@ -8,6 +8,7 @@ import { useNotification } from '../contextx/NotificationContext';
 import { useLanguage } from '../contextx/LanguageContext';
 import { executeSingleSearch } from '../services/search';
 import { translateText } from '../services/translation';
+import mammoth from 'mammoth';
 
 const getCleanErrorMessage = (error: any): string => {
     if (!error) return 'An unknown error occurred.';
@@ -92,11 +93,18 @@ export const useAppLogic = () => {
     }, [finalData, currentHistoryId, appState, query]);
 
     const startResearch = useCallback(async (context: string) => {
+        if (!apiKeyService.hasKey()) {
+            addNotification({type: 'warning', title: t('apiKeyRequiredTitle'), message: t('apiKeyRequiredMessage')});
+            setIsSettingsOpen(true);
+            setAppState('paused'); // Pause the app if keys are missing
+            return;
+        }
+
         if (!abortControllerRef.current || abortControllerRef.current.signal.aborted) {
             abortControllerRef.current = new AbortController();
         }
         const startTime = Date.now();
-        const selectedRole = roles.find(r => r.id === selectedRoleId);
+        const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
 
         try {
             const result = await runIterativeDeepResearch(query, (update) => {
@@ -155,7 +163,7 @@ export const useAppLogic = () => {
 
     const handleClarificationResponse = useCallback(async (history: ClarificationTurn[], searchResult: { text: string; citations: Citation[] } | null) => {
       setClarificationLoading(true);
-      const selectedRole = roles.find(r => r.id === selectedRoleId);
+      const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
       try {
           const response = await clarifyQuery(history, mode, selectedFile, selectedRole, searchResult);
           if (response.type === 'question') {
@@ -240,6 +248,19 @@ export const useAppLogic = () => {
             
             setInitialSearchResult(searchResultForClarification);
 
+            // 添加关键延迟：在初始搜索和澄清阶段之间等待，避免API速率限制
+            // DeepDive模式进行更复杂的搜索分析，需要更长延迟确保API密钥冷却
+            const delayBeforeClarification = mode === 'DeepDive' ? 5000 : mode === 'Balanced' ? 3000 : 2000;
+            console.log(`Initial search completed. Adding ${delayBeforeClarification}ms delay before clarification to prevent API rate limiting (mode: ${mode})...`);
+
+            await new Promise(resolve => setTimeout(resolve, delayBeforeClarification));
+
+            // 强制轮换到下一个API密钥，确保澄清阶段使用不同的密钥
+            console.log("Forcing API key rotation before clarification phase...");
+            console.log(`[DEBUG] Keys before rotation: ${JSON.stringify(apiKeyService.getApiKeys())}, Current Index: ${apiKeyService['currentKeyIndex']}`);
+            const nextKey = apiKeyService.getNextApiKey(); // 主动轮换到下一个密钥
+            console.log(`[DEBUG] Keys after rotation: ${JSON.stringify(apiKeyService.getApiKeys())}, Next Index: ${apiKeyService['currentKeyIndex']}, Key to be used: ${nextKey}`);
+
             setAppState('clarifying');
             const initialQuery = selectedFile ? `${query}\n\n[File attached: ${selectedFile.name}]` : query;
             const initialHistory: ClarificationTurn[] = [{ role: 'user', content: initialQuery }];
@@ -307,7 +328,7 @@ export const useAppLogic = () => {
     const handleGenerateReportFromPause = useCallback(async () => {
         if (appState !== 'paused') return;
         
-        const selectedRole = roles.find(r => r.id === selectedRoleId);
+        const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
     
         const getCitationsFromHistory = (history: ResearchUpdate[]): Citation[] => {
             const citationsMap = new Map<string, Citation>();
@@ -408,7 +429,7 @@ export const useAppLogic = () => {
     const handleRegenerateReport = useCallback(async () => {
         if (!finalData) return;
         setIsRegenerating(true);
-        const selectedRole = roles.find(r => r.id === selectedRoleId);
+        const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
         try {
             addNotification({ type: 'info', title: t('reportRegeneratedTitle'), message: t('regenerating') });
             const regeneratedReportData = await synthesizeReport(query, researchUpdates, finalData.citations, mode, selectedFile, selectedRole, "");
@@ -431,7 +452,7 @@ export const useAppLogic = () => {
     const handleReportRewrite = useCallback(async (instruction: string, file: FileData | null) => {
         if (!finalData?.reports[finalData.activeReportIndex] || isRegenerating || isRewriting) return;
         setIsRewriting(true);
-        const selectedRole = roles.find(r => r.id === selectedRoleId);
+        const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
         try {
             const currentReport = finalData.reports[finalData.activeReportIndex].content;
             const rewrittenReport = await rewriteReport(currentReport, instruction, mode, file, selectedRole);
@@ -458,15 +479,52 @@ export const useAppLogic = () => {
         researchExecutionRef.current = false;
     };
 
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files?.[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const base64String = e.target?.result as string;
-        setSelectedFile({ name: file.name, mimeType: file.type, data: base64String.split(',')[1] });
-      };
-      reader.readAsDataURL(file);
+    const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(file);
+
+        reader.onload = async (e) => {
+            try {
+                const arrayBuffer = e.target?.result as ArrayBuffer;
+                if (!arrayBuffer) return;
+
+                const base64String = btoa(new Uint8Array(arrayBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+
+                const fileData: FileData = {
+                    name: file.name,
+                    mimeType: file.type,
+                    data: base64String,
+                };
+
+                if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                    addNotification({ type: 'info', title: 'Processing File...', message: `Extracting text from ${file.name}...` });
+                    const result = await mammoth.extractRawText({ arrayBuffer });
+                    fileData.extractedText = result.value;
+                    addNotification({ type: 'success', title: 'File Processed', message: `Successfully extracted text from ${file.name}.` });
+                } else if (file.type.startsWith('text/')) {
+                    const textDecoder = new TextDecoder('utf-8');
+                    fileData.extractedText = textDecoder.decode(arrayBuffer);
+                } else if (file.type === 'application/pdf') {
+                    addNotification({ type: 'warning', title: 'PDFs Not Fully Supported', message: 'Text from this PDF cannot be extracted in the browser yet. The file will be attached, but the AI may not be able to read its content.' });
+                }
+                
+                setSelectedFile(fileData);
+
+            } catch (error) {
+                console.error("Failed to process file:", error);
+                const message = getCleanErrorMessage(error);
+                addNotification({ type: 'error', title: 'File Processing Failed', message });
+                setSelectedFile(null);
+            }
+        };
+
+        reader.onerror = () => {
+            console.error("Failed to read file:", reader.error);
+            addNotification({ type: 'error', title: 'File Read Failed', message: getCleanErrorMessage(reader.error) });
+        };
     };
 
     const handleRemoveFile = () => {

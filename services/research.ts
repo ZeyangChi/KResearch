@@ -16,10 +16,11 @@ const performSearchAndRead = async (
     searchQueries: string[],
     mode: ResearchMode,
     checkSignal: () => void,
+    signal: AbortSignal
 ): Promise<{ readUpdateContent: Omit<ResearchUpdate, 'id' | 'persona'>; newCitations: Citation[] }> => {
     checkSignal();
 
-    const searchPromises = searchQueries.map(q => executeSingleSearch(q, mode));
+    const searchPromises = searchQueries.map(q => executeSingleSearch(q, mode, signal));
     const searchResults = await Promise.all(searchPromises);
     checkSignal();
 
@@ -78,7 +79,7 @@ export const runIterativeDeepResearch = async (
     const searchQueries = Array.isArray(lastUpdate.content) ? lastUpdate.content : [String(lastUpdate.content)];
     console.log('Recovering from a previous state. Retrying last search action.', searchQueries);
 
-    const { readUpdateContent, newCitations } = await performSearchAndRead(searchQueries, mode, checkSignal);
+    const { readUpdateContent, newCitations } = await performSearchAndRead(searchQueries, mode, checkSignal, signal);
     allCitations.push(...newCitations);
 
     const readUpdate = {
@@ -107,7 +108,7 @@ export const runIterativeDeepResearch = async (
     const plan = await runDynamicConversationalPlanner(query, history, (update) => {
         history.push(update);
         onUpdate(update);
-    }, checkSignal, idCounter, mode, clarifiedContext, fileData, role, totalSearchUpdates);
+    }, checkSignal, idCounter, mode, clarifiedContext, fileData, role, totalSearchUpdates, signal);
     
     checkSignal();
 
@@ -126,7 +127,7 @@ export const runIterativeDeepResearch = async (
       history.push(searchUpdate);
       onUpdate(searchUpdate);
       
-      const { readUpdateContent, newCitations } = await performSearchAndRead(searchQueries, mode, checkSignal);
+      const { readUpdateContent, newCitations } = await performSearchAndRead(searchQueries, mode, checkSignal, signal);
       allCitations.push(...newCitations);
       
       const readUpdate = { 
@@ -150,7 +151,7 @@ export const runIterativeDeepResearch = async (
 
   // Directly call synthesizeReport, passing an empty string for the outline.
   // The synthesis prompt will handle the lack of an outline.
-  const finalReportData = await synthesizeReport(query, history, allCitations, mode, fileData, role, "");
+  const finalReportData = await synthesizeReport(query, history, allCitations, mode, fileData, role, "", signal);
 
   const uniqueCitations = Array.from(new Map(allCitations.map(c => [c.url, c])).values());
   const totalSearchUpdates = history.filter(h => h.type === 'search').length;

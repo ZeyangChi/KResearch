@@ -22,6 +22,7 @@ export const synthesizeReport = async (
     fileData: FileData | null,
     role: Role | null,
     reportOutline: string,
+    signal?: AbortSignal
 ): Promise<Omit<FinalResearchData, 'researchTimeMs' | 'searchCycles' | 'researchUpdates' | 'citations'>> => {
     const learnings = history.filter(h => h.type === 'read').map(h => h.content).join('\n\n---\n\n');
     const historyText = history.map(h => `${h.persona ? h.persona + ' ' : ''}${h.type}: ${Array.isArray(h.content) ? h.content.join(' | ') : h.content}`).join('\n');
@@ -108,17 +109,37 @@ Respond ONLY with the raw markdown content of the final report, starting with th
     const finalReportPrompt = `${corePrompt}\n${instructions}\n${commonInstructions}`;
 
     const parts: ({ text: string } | { inlineData: { mimeType: string; data: string; } })[] = [{ text: finalReportPrompt }];
+    
+    // Handle the main research file attachment
     if (fileData) {
-        parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
+        if (fileData.extractedText) {
+            const fileContext = `\n\n--- Attached File Content (${fileData.name}) ---\n${fileData.extractedText}`;
+            const firstPart = parts[0];
+            if ('text' in firstPart) {
+                firstPart.text += fileContext;
+            }
+        } else if (fileData.mimeType.startsWith('image/')) {
+            parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
+        }
     }
+
+    // Handle the file attached to a Role
     if (role?.file) {
-        parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+        if (role.file.extractedText) {
+            const roleFileContext = `\n\n--- Attached Role File Content (${role.file.name}) ---\n${role.file.extractedText}`;
+            const firstPart = parts[0];
+            if ('text' in firstPart) {
+                firstPart.text += roleFileContext;
+            }
+        } else if (role.file.mimeType.startsWith('image/')) {
+            parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+        }
     }
     const reportResponse = await ai.models.generateContent({
         model: getModel('synthesizer', mode),
         contents: { parts },
         config: { temperature: 0.5 }
-    });
+    }, signal);
     
     if (!reportResponse) {
         throw new Error("The API did not return a response during report synthesis. This might be due to content filters blocking the request.");
@@ -140,6 +161,7 @@ export const rewriteReport = async (
     mode: ResearchMode,
     file: FileData | null,
     role: Role | null,
+    signal?: AbortSignal
 ): Promise<string> => {
     const roleContext = getRoleContext(role);
     const prompt = `You are an expert copy editor. Your task is to rewrite the provided Markdown report based on a specific instruction.
@@ -168,18 +190,38 @@ ${role?.file ? `A file named '${role.file.name}' was attached with the role.` : 
 Respond with the rewritten report now.`;
 
     const parts: ({ text: string } | { inlineData: { mimeType: string; data: string; } })[] = [{ text: prompt }];
+    
+    // Handle the main research file attachment
     if (file) {
-        parts.push({ inlineData: { mimeType: file.mimeType, data: file.data } });
+        if (file.extractedText) {
+            const fileContext = `\n\n--- Attached File Content (${file.name}) ---\n${file.extractedText}`;
+            const firstPart = parts[0];
+            if ('text' in firstPart) {
+                firstPart.text += fileContext;
+            }
+        } else if (file.mimeType.startsWith('image/')) {
+            parts.push({ inlineData: { mimeType: file.mimeType, data: file.data } });
+        }
     }
+
+    // Handle the file attached to a Role
     if (role?.file) {
-        parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+        if (role.file.extractedText) {
+            const roleFileContext = `\n\n--- Attached Role File Content (${role.file.name}) ---\n${role.file.extractedText}`;
+            const firstPart = parts[0];
+            if ('text' in firstPart) {
+                firstPart.text += roleFileContext;
+            }
+        } else if (role.file.mimeType.startsWith('image/')) {
+            parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+        }
     }
 
     const response = await ai.models.generateContent({
         model: getModel('synthesizer', mode),
         contents: { parts },
         config: { temperature: 0.7 }
-    });
+    }, signal);
 
     if (!response || !response.text) {
         throw new Error("The API did not return a response during report rewrite. This might be due to content filters blocking the request.");

@@ -5,6 +5,7 @@ import { settingsService } from './settingsService';
 import { parseJsonFromMarkdown } from './utils';
 import { ResearchUpdate, AgentPersona, ResearchMode, FileData, Role } from '../types';
 import { getPlannerPrompt, plannerTurnSchema } from './plannerPrompt';
+import { apiKeyService } from './apiKeyService';
 
 interface PlannerTurn {
     thought: string;
@@ -23,7 +24,8 @@ export const runDynamicConversationalPlanner = async (
     clarifiedContext: string,
     fileData: FileData | null,
     role: Role | null,
-    searchCycles: number
+    searchCycles: number,
+    signal: AbortSignal
 ): Promise<{ search_queries: string[], should_finish: boolean, finish_reason?: string }> => {
     const { minCycles, maxDebateRounds, maxCycles } = settingsService.getSettings().researchParams;
 
@@ -73,22 +75,44 @@ export const runDynamicConversationalPlanner = async (
         });
         
         const parts: ({ text: string } | { inlineData: { mimeType: string; data: string; } })[] = [{ text: prompt }];
+        
+        // Handle the main research file attachment
         if (fileData) {
-            parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
-        }
-        if (role?.file) {
-            parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+            if (fileData.extractedText) {
+                const fileContext = `\n\n--- Attached File Content (${fileData.name}) ---\n${fileData.extractedText}`;
+                const firstPart = parts[0];
+                if ('text' in firstPart) {
+                    firstPart.text += fileContext;
+                }
+            } else if (fileData.mimeType.startsWith('image/')) {
+                parts.push({ inlineData: { mimeType: fileData.mimeType, data: fileData.data } });
+            }
         }
 
+        // Handle the file attached to a Role
+        if (role?.file) {
+            if (role.file.extractedText) {
+                const roleFileContext = `\n\n--- Attached Role File Content (${role.file.name}) ---\n${role.file.extractedText}`;
+                const firstPart = parts[0];
+                if ('text' in firstPart) {
+                    firstPart.text += roleFileContext;
+                }
+            } else if (role.file.mimeType.startsWith('image/')) {
+                parts.push({ inlineData: { mimeType: role.file.mimeType, data: role.file.data } });
+            }
+        }
+
+        console.log(`[DEBUG] Planner about to call generateContent. API Key Service State: Index=${apiKeyService['currentKeyIndex']}, Keys=${JSON.stringify(apiKeyService.getApiKeys())}`);
+        console.log(`[DEBUG] Planner about to call generateContent. API Key Service State: Index=${apiKeyService['currentKeyIndex']}, Keys=${JSON.stringify(apiKeyService.getApiKeys())}`);
         const response = await ai.models.generateContent({
             model: getModel('planner', mode),
             contents: { parts },
-            config: { 
-                responseMimeType: "application/json", 
+            config: {
+                responseMimeType: "application/json",
                 temperature: 0.7,
                 responseSchema: plannerTurnSchema
             }
-        });
+        }, signal);
         checkSignal();
         const parsedResponse = parseJsonFromMarkdown(response.text) as PlannerTurn;
 

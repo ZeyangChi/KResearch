@@ -3,12 +3,12 @@ import { ai } from './geminiClient';
 import { getModel } from './models';
 import { Citation, ResearchMode } from '../types';
 
-export const executeSingleSearch = async (searchQuery: string, mode: ResearchMode): Promise<{ text: string, citations: Citation[] }> => {
+export const executeSingleSearch = async (searchQuery: string, mode: ResearchMode, signal?: AbortSignal): Promise<{ text: string, citations: Citation[] }> => {
     const response: GenerateContentResponse = await ai.models.generateContent({
         model: getModel('searcher', mode),
         contents: `Concisely summarize key information for the query: "${searchQuery}"`,
         config: { tools: [{ googleSearch: {} }] },
-    });
+    }, signal);
 
     const groundingMetadata = response.candidates?.[0]?.groundingMetadata?.groundingChunks;
     const citations: Citation[] = groundingMetadata
