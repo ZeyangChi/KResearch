@@ -48,7 +48,8 @@ const AppContent: React.FC = () => {
       history, loadFromHistory, deleteHistoryItem, clearHistory, handleUpdateHistoryTitle,
       handleNavigateVersion,
       handleTranslateReport, translationLoading,
-      roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen
+      roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen,
+      academicOutline, isGeneratingOutline
   } = useAppLogic();
 
   const [isLogVisible, setIsLogVisible] = useState<boolean>(true);
@@ -181,7 +182,15 @@ const AppContent: React.FC = () => {
           )}
           
           {appState === 'clarifying' && (<ClarificationChat history={clarificationHistory} onAnswerSubmit={handleAnswerSubmit} onSkip={handleSkipClarification} isLoading={clarificationLoading}/>)}
-          
+
+          {appState === 'outlining' && (
+            <div className="flex flex-col items-center justify-center gap-3 animate-fade-in p-8">
+                <Spinner />
+                <span className="text-lg font-semibold">正在生成学术大纲...</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Alpha和Beta智能体正在协作设计学术论文结构</span>
+            </div>
+          )}
+
           {appState === 'researching' && (<LiquidButton onClick={handleStopResearch} className="w-full bg-red-500/30 hover:bg-red-500/40 border-red-500/50">{t('stopResearch')}</LiquidButton>)}
           
           {appState === 'synthesizing' && (

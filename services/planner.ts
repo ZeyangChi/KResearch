@@ -25,7 +25,8 @@ export const runDynamicConversationalPlanner = async (
     fileData: FileData | null,
     role: Role | null,
     searchCycles: number,
-    signal: AbortSignal
+    signal: AbortSignal,
+    academicOutline?: string | null
 ): Promise<{ search_queries: string[], should_finish: boolean, finish_reason?: string }> => {
     const { minCycles, maxDebateRounds, maxCycles } = settingsService.getSettings().researchParams;
 
@@ -72,6 +73,7 @@ export const runDynamicConversationalPlanner = async (
             minCycles,
             maxCycles,
             isFirstTurn,
+            academicOutline,
         });
         
         const parts: ({ text: string } | { inlineData: { mimeType: string; data: string; } })[] = [{ text: prompt }];

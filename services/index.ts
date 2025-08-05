@@ -6,6 +6,7 @@ export { synthesizeReport, rewriteReport } from './synthesis';
 export { AllKeysFailedError, apiKeyService } from './apiKeyService';
 export { historyService } from './historyService';
 export { generateOutline } from './outline';
+export { generateAcademicOutline } from './academicOutline';
 export { translateText } from './translation';
 export { roleService } from './roleService';
 export * as roleAIService from './roleAIService';

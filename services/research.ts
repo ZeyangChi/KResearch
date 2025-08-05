@@ -46,7 +46,8 @@ export const runIterativeDeepResearch = async (
   fileData: FileData | null,
   role: Role | null,
   initialSearchResult: { text: string, citations: Citation[] } | null,
-  existingHistory: ResearchUpdate[]
+  existingHistory: ResearchUpdate[],
+  academicOutline?: string | null
 ): Promise<Omit<FinalResearchData, 'researchTimeMs'>> => {
   console.log(`Starting/Continuing DYNAMIC CONVERSATIONAL research for: ${query}`);
 
@@ -108,7 +109,7 @@ export const runIterativeDeepResearch = async (
     const plan = await runDynamicConversationalPlanner(query, history, (update) => {
         history.push(update);
         onUpdate(update);
-    }, checkSignal, idCounter, mode, clarifiedContext, fileData, role, totalSearchUpdates, signal);
+    }, checkSignal, idCounter, mode, clarifiedContext, fileData, role, totalSearchUpdates, signal, academicOutline);
     
     checkSignal();
 
@@ -149,9 +150,8 @@ export const runIterativeDeepResearch = async (
   history.push(synthesisMessage);
   onUpdate(synthesisMessage);
 
-  // Directly call synthesizeReport, passing an empty string for the outline.
-  // The synthesis prompt will handle the lack of an outline.
-  const finalReportData = await synthesizeReport(query, history, allCitations, mode, fileData, role, "", signal);
+  // Call synthesizeReport with academic outline if available
+  const finalReportData = await synthesizeReport(query, history, allCitations, mode, fileData, role, "", signal, academicOutline);
 
   const uniqueCitations = Array.from(new Map(allCitations.map(c => [c.url, c])).values());
   const totalSearchUpdates = history.filter(h => h.type === 'search').length;

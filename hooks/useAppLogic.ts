@@ -1,7 +1,7 @@
 
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { synthesizeReport, rewriteReport, clarifyQuery, runIterativeDeepResearch, generateVisualReport, regenerateVisualReportWithFeedback } from '../services';
+import { synthesizeReport, rewriteReport, clarifyQuery, runIterativeDeepResearch, generateVisualReport, regenerateVisualReportWithFeedback, generateAcademicOutline } from '../services';
 import { ResearchUpdate, FinalResearchData, ResearchMode, FileData, AppState, ClarificationTurn, Citation, HistoryItem, TranslationStyle, ReportVersion, Role } from '../types';
 import { AllKeysFailedError, apiKeyService, historyService, roleService } from '../services';
 import { useNotification } from '../contextx/NotificationContext';
@@ -72,7 +72,11 @@ export const useAppLogic = () => {
     const [history, setHistory] = useState<HistoryItem[]>(() => historyService.getHistory());
     const [currentHistoryId, setCurrentHistoryId] = useState<string | null>(null);
     const [translationLoading, setTranslationLoading] = useState<boolean>(false);
-    
+
+    // Academic outline state
+    const [academicOutline, setAcademicOutline] = useState<string | null>(null);
+    const [isGeneratingOutline, setIsGeneratingOutline] = useState<boolean>(false);
+
     // Role state
     const [roles, setRoles] = useState<Role[]>(() => roleService.getRoles());
     const [selectedRoleId, setSelectedRoleId] = useState<string | null>(null);
@@ -109,7 +113,7 @@ export const useAppLogic = () => {
         try {
             const result = await runIterativeDeepResearch(query, (update) => {
                 setResearchUpdates(prev => [...prev, update]);
-            }, abortControllerRef.current!.signal, mode, context, selectedFile, selectedRole, initialSearchResult, researchUpdates);
+            }, abortControllerRef.current!.signal, mode, context, selectedFile, selectedRole, initialSearchResult, researchUpdates, academicOutline);
             
             const resultData = { ...result, researchTimeMs: Date.now() - startTime };
             setFinalData(resultData);
@@ -159,7 +163,7 @@ export const useAppLogic = () => {
             }
             setAppState('complete');
         }
-    }, [query, mode, selectedFile, addNotification, initialSearchResult, clarificationHistory, t, roles, selectedRoleId, researchUpdates]);
+    }, [query, mode, selectedFile, addNotification, initialSearchResult, clarificationHistory, t, roles, selectedRoleId, researchUpdates, academicOutline]);
 
     const handleClarificationResponse = useCallback(async (history: ClarificationTurn[], searchResult: { text: string; citations: Citation[] } | null) => {
       setClarificationLoading(true);
@@ -170,7 +174,7 @@ export const useAppLogic = () => {
               setClarificationHistory(prev => [...prev, { role: 'model', content: response.content }]);
           } else if (response.type === 'summary') {
               setClarifiedContext(response.content);
-              setAppState('researching');
+              setAppState('outlining');
           }
       } catch (error) {
             if (error instanceof AllKeysFailedError) {
@@ -187,15 +191,43 @@ export const useAppLogic = () => {
       }
     }, [mode, selectedFile, addNotification, t, roles, selectedRoleId]);
 
+    // Handle academic outline generation
     useEffect(() => {
-      if (appState === 'researching' && clarifiedContext && !researchExecutionRef.current) {
+        if (appState === 'outlining' && clarifiedContext && !isGeneratingOutline) {
+            setIsGeneratingOutline(true);
+            const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
+
+            generateAcademicOutline(clarifiedContext, mode, selectedFile, selectedRole, abortControllerRef.current?.signal)
+                .then((outline) => {
+                    setAcademicOutline(outline);
+                    setAppState('researching');
+                })
+                .catch((error) => {
+                    if (error instanceof AllKeysFailedError) {
+                        addNotification({ type: 'error', title: t('apiKeysFailedTitle'), message: t('apiKeysFailedMessage') });
+                        apiKeyService.reset();
+                    } else {
+                        console.error("Academic outline generation failed:", error);
+                        const message = getCleanErrorMessage(error);
+                        addNotification({type: 'error', title: '学术大纲生成失败', message});
+                    }
+                    setAppState('paused');
+                })
+                .finally(() => {
+                    setIsGeneratingOutline(false);
+                });
+        }
+    }, [appState, clarifiedContext, isGeneratingOutline, mode, selectedFile, roles, selectedRoleId, addNotification, t]);
+
+    useEffect(() => {
+      if (appState === 'researching' && clarifiedContext && academicOutline && !researchExecutionRef.current) {
           researchExecutionRef.current = true;
           startResearch(clarifiedContext)
             .finally(() => {
                 researchExecutionRef.current = false;
             });
       }
-    }, [appState, clarifiedContext, startResearch]);
+    }, [appState, clarifiedContext, academicOutline, startResearch]);
 
     const startClarificationProcess = useCallback(async (guidedSearchQuery?: string) => {
         if (!query.trim() || (appState !== 'idle' && appState !== 'paused')) return;
@@ -664,7 +696,7 @@ export const useAppLogic = () => {
 
     return {
         query, setQuery, guidedQuery, setGuidedQuery, selectedFile, researchUpdates, finalData, mode, setMode, appState,
-        clarificationHistory, clarificationLoading, fileInputRef, startClarificationProcess, 
+        clarificationHistory, clarificationLoading, fileInputRef, startClarificationProcess,
         handleAnswerSubmit, handleStopResearch, handleFileChange, handleRemoveFile, handleReset,
         isVisualizing, visualizedReportHtml, isVisualizerOpen, handleVisualizeReport, handleCloseVisualizer, handleSkipClarification,
         isRegenerating, isRewriting, handleRegenerateReport, handleReportRewrite,
@@ -675,6 +707,8 @@ export const useAppLogic = () => {
         history, loadFromHistory, deleteHistoryItem, clearHistory, handleUpdateHistoryTitle,
         handleNavigateVersion,
         handleTranslateReport, translationLoading,
-        roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen
+        roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen,
+        // Academic outline related
+        academicOutline, isGeneratingOutline
     };
 };

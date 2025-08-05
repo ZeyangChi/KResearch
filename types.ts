@@ -2,8 +2,8 @@
 export type ResearchUpdateType = 'thought' | 'search' | 'read' | 'outline';
 export type AgentPersona = 'Alpha' | 'Beta';
 export type ResearchMode = 'Balanced' | 'DeepDive' | 'Fast' | 'UltraFast';
-export type AppState = 'idle' | 'clarifying' | 'researching' | 'paused' | 'complete' | 'synthesizing';
-export type AgentRole = 'planner' | 'searcher' | 'synthesizer' | 'clarification' | 'visualizer' | 'outline' | 'roleAI';
+export type AppState = 'idle' | 'clarifying' | 'outlining' | 'researching' | 'paused' | 'complete' | 'synthesizing';
+export type AgentRole = 'planner' | 'searcher' | 'synthesizer' | 'clarification' | 'visualizer' | 'outline' | 'roleAI' | 'academicOutline';
 export type NotificationType = 'success' | 'error' | 'info' | 'warning';
 export type TranslationStyle = 'literal' | 'colloquial';
 
@@ -97,4 +97,5 @@ export interface HistoryItem {
   date: string; // ISO string
   initialSearchResult: { text: string; citations: Citation[] } | null;
   clarifiedContext: string;
+  academicOutline?: string; // 新增学术大纲字段
 }

@@ -22,13 +22,33 @@ export const synthesizeReport = async (
     fileData: FileData | null,
     role: Role | null,
     reportOutline: string,
-    signal?: AbortSignal
+    signal?: AbortSignal,
+    academicOutline?: string | null
 ): Promise<Omit<FinalResearchData, 'researchTimeMs' | 'searchCycles' | 'researchUpdates' | 'citations'>> => {
     const learnings = history.filter(h => h.type === 'read').map(h => h.content).join('\n\n---\n\n');
     const historyText = history.map(h => `${h.persona ? h.persona + ' ' : ''}${h.type}: ${Array.isArray(h.content) ? h.content.join(' | ') : h.content}`).join('\n');
     const roleContext = getRoleContext(role);
 
-    const corePrompt = `You are an elite Senior Research Analyst. Your mission is to write a comprehensive, insightful, and substantial research report based on a collection of research materials.
+    const corePrompt = academicOutline ? `You are a world-class academic researcher and scholarly writer. Your mission is to write a comprehensive, rigorous academic review paper that meets the highest scholarly standards.
+${roleContext}
+**Your Task:**
+Write a complete academic review paper following strict scholarly conventions.
+
+**Core Research Topic:**
+<REQUIREMENT>${query}</REQUIREMENT>
+
+**Academic Outline to Follow:**
+<ACADEMIC_OUTLINE>
+${academicOutline}
+</ACADEMIC_OUTLINE>
+
+**Evidence Base (Your Sole Source of Truth for content):**
+*   **Attached File:** ${fileData ? `A file named '${fileData.name}' was provided and its content is a primary source.` : "No file was provided."}
+*   **Role-specific File:** ${role?.file ? `A file named '${role.file.name}' was provided with the role and its content is a primary source.` : "No file was provided with the role."}
+*   **Synthesized Research Learnings:** <LEARNINGS>${learnings || "No specific content was read during research."}</LEARNINGS>
+*   **Full Research History (For Context and Nuance):** <HISTORY>${historyText}</HISTORY>
+
+**--- MANDATORY ACADEMIC WRITING STANDARDS ---**` : `You are an elite Senior Research Analyst. Your mission is to write a comprehensive, insightful, and substantial research report based on a collection of research materials.
 ${roleContext}
 **Your Task:**
 Write a polished and extensive final report.
@@ -44,7 +64,33 @@ Write a polished and extensive final report.
 
 **--- CRITICAL REPORTING INSTRUCTIONS ---**`;
 
-    const instructions = reportOutline
+    const instructions = academicOutline
+    ? `
+**1. MANDATORY Academic Structure Adherence:**
+*   You **MUST** strictly follow the academic outline provided in \`<ACADEMIC_OUTLINE>\`. This is non-negotiable.
+*   Every section and subsection specified in the outline must be present and fully developed.
+*   Your output must conform to academic writing standards and scholarly conventions.
+*   The very first line of your response **MUST BE** the H1 title as specified in the academic outline.
+
+**2. Academic Writing Requirements:**
+*   **Minimum Length**: 8000 words total. Each major section should be substantial:
+    - Abstract: 300-500 words
+    - Introduction: 1000-1500 words
+    - Literature Review: 2000-3000 words
+    - Main Analysis: 3000-4000 words
+    - Conclusion: 800-1200 words
+*   **Academic Language**: Use formal, scholarly language with precise terminology
+*   **Critical Analysis**: Provide deep analytical insights, not just descriptive content
+*   **Theoretical Framework**: Establish and maintain a clear theoretical foundation
+*   **Evidence-Based Arguments**: Every claim must be supported by evidence from the research learnings
+
+**3. Citation and Reference Standards:**
+*   Use proper academic citation format (APA style preferred)
+*   Include in-text citations for all factual claims and theoretical points
+*   Create a comprehensive References section at the end
+*   Ensure all sources from the research learnings are properly attributed
+`
+    : reportOutline
     ? `
 **1. Adherence to Outline & Role:**
 *   You **MUST** follow the structure provided in the \`<OUTLINE>\` below. This includes all specified headings, subheadings, and content points.
@@ -62,7 +108,21 @@ ${reportOutline}
 *   Your output and tone must be consistent with your assigned Role Directive.
 *   The very first line of your response **MUST BE** an H1 markdown title for the report (e.g., \`# An In-Depth Analysis of X\`).`;
 
-const commonInstructions = `
+const commonInstructions = academicOutline ? `
+**4. Academic Content Development:**
+*   **Comprehensive Analysis**: Each section must provide thorough, scholarly analysis that goes beyond surface-level description
+*   **Theoretical Integration**: Connect findings to established theoretical frameworks and academic literature
+*   **Critical Evaluation**: Demonstrate critical thinking by evaluating evidence, identifying limitations, and discussing implications
+*   **Scholarly Synthesis**: Synthesize information from multiple sources to create new insights and understanding
+*   **Academic Rigor**: Maintain the highest standards of academic integrity and scholarly precision
+
+**5. Section-Specific Requirements:**
+*   **Abstract**: Concise summary including background, methods, key findings, and conclusions
+*   **Introduction**: Clear research context, objectives, significance, and paper structure
+*   **Literature Review**: Systematic analysis of existing research, identifying gaps and positioning your analysis
+*   **Main Analysis**: In-depth examination with multiple perspectives, supported by evidence
+*   **Conclusion**: Synthesis of findings, implications, limitations, and future research directions
+` : `
 **2. Content Generation:**
 *   Flesh out each section with detailed analysis, synthesizing information from the \`<LEARNINGS>\` block, the attached files, and the broader research history.
 *   Provide in-depth analysis. Do not just list facts; interpret them, connect disparate points, and discuss the implications, all through the lens of your role.
@@ -99,11 +159,11 @@ const commonInstructions = `
             \`\`\`
     *   **Rule 4: Simplicity is Key.** Do not attempt complex styling or experimental features within the Mermaid code block. A simple, correct diagram is infinitely better than a complex, broken one.
     *   **Rule 5: Embed Correctly.** Embed the complete and valid \`\`\`mermaid ... \`\`\` code block directly in the relevant sections of the report.
-*   **Tone & Formatting:** Maintain a formal, objective, and authoritative tone, unless your Role Directive specifies otherwise. Use Markdown extensively for clarity (headings, lists, bold text).
-*   **Exclusivity:** The report's content must be based **exclusively** on the information provided. Do NOT invent information or use any outside knowledge. Do NOT include inline citations.
+*   **Tone & Formatting:** ${academicOutline ? 'Maintain formal academic writing style with scholarly language, precise terminology, and objective analysis. Use proper academic formatting with clear headings, numbered sections, and professional presentation.' : 'Maintain a formal, objective, and authoritative tone, unless your Role Directive specifies otherwise. Use Markdown extensively for clarity (headings, lists, bold text).'}
+*   **Exclusivity:** The report's content must be based **exclusively** on the information provided. Do NOT invent information or use any outside knowledge. ${academicOutline ? 'Include proper academic citations for all claims and evidence.' : 'Do NOT include inline citations.'}
 
 **Final Output:**
-Respond ONLY with the raw markdown content of the final report, starting with the H1 title. Do not add any conversational text or explanation.
+${academicOutline ? 'Respond ONLY with the complete academic review paper in raw markdown format, starting with the H1 title. The paper must be comprehensive, scholarly, and meet the 8000+ word requirement. Include a complete References section at the end.' : 'Respond ONLY with the raw markdown content of the final report, starting with the H1 title. Do not add any conversational text or explanation.'}
 `;
 
     const finalReportPrompt = `${corePrompt}\n${instructions}\n${commonInstructions}`;

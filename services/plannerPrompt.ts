@@ -24,6 +24,7 @@ interface PlannerPromptParams {
     minCycles: number;
     maxCycles: number;
     isFirstTurn: boolean;
+    academicOutline?: string | null; // 新增学术大纲参数
 }
 
 export const getPlannerPrompt = ({
@@ -38,7 +39,8 @@ export const getPlannerPrompt = ({
     conversationText,
     minCycles,
     maxCycles,
-    isFirstTurn
+    isFirstTurn,
+    academicOutline
 }: PlannerPromptParams): string => {
 
 const roleContext = role ? `
@@ -61,6 +63,21 @@ ${roleContext}
 *   Total search cycles so far: ${searchCycles}.
 *   Previously Executed Searches: <searches>${searchHistoryText || 'None yet.'}</searches>
 *   Synthesized Learnings from Past Searches: <learnings>${readHistoryText || 'No learnings yet.'}</learnings>
+
+${academicOutline ? `**CRITICAL: Academic Outline Constraint**
+You MUST ensure all research activities serve the following academic outline. Every search query must target specific sections of this outline:
+
+<ACADEMIC_OUTLINE>
+${academicOutline}
+</ACADEMIC_OUTLINE>
+
+**Mandatory Outline Adherence Rules:**
+1. Each search query must explicitly target content for a specific section of the academic outline
+2. Prioritize sections that currently lack sufficient research material
+3. Ensure comprehensive coverage of all outline sections before concluding research
+4. Focus on academic-quality sources: scholarly articles, research papers, authoritative reports
+5. Aim for 8000+ words of final content by gathering substantial material for each section
+` : ''}
 
 **Current Planning Conversation:**
 ${conversationText || "You are Agent Alpha, starting the conversation. Propose the initial strategy based on the 'Cognitive Ascent' protocol below."}
