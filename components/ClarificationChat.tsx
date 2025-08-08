@@ -11,9 +11,10 @@ interface ClarificationChatProps {
     onAnswerSubmit: (answer: string) => void;
     isLoading: boolean;
     onSkip: () => void;
+    onAcknowledge: () => void;
 }
 
-const ClarificationChat: React.FC<ClarificationChatProps> = ({ history, onAnswerSubmit, isLoading, onSkip }) => {
+const ClarificationChat: React.FC<ClarificationChatProps> = ({ history, onAnswerSubmit, isLoading, onSkip, onAcknowledge }) => {
     const [userAnswer, setUserAnswer] = useState('');
     const chatContainerRef = useRef<HTMLDivElement>(null);
     const { t } = useLanguage();
@@ -99,11 +100,11 @@ const ClarificationChat: React.FC<ClarificationChatProps> = ({ history, onAnswer
                     aria-label="Your answer to the AI's question"
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                     <LiquidButton type="submit" disabled={isLoading || !userAnswer.trim()} className="w-full">
+                    <LiquidButton type="submit" disabled={isLoading || !userAnswer.trim()} className="w-full">
                         {isLoading ? t('waiting') : t('sendAnswer')}
                     </LiquidButton>
-                     <LiquidButton type="button" onClick={onSkip} disabled={isLoading} className="w-full bg-transparent hover:bg-black/5 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 hover:shadow-none hover:-translate-y-0 active:translate-y-px">
-                        {t('skipAndStart')}
+                    <LiquidButton type="button" onClick={onSkip} disabled={isLoading} className="w-full">
+                        {t('skipAndGenerateOutline')}
                     </LiquidButton>
                 </div>
             </form>

@@ -1,0 +1,1194 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: Object
+generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent:1  Failed to load resource: net::ERR_CONNECTION_CLOSED
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 2253ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '4AuVaKb8LZmF1MkPkZCB6QU', text: '好的，该研究体系颇具新意。将“结构基因”的概念系统化，并建立一个正交化的分类框架，是实现结构性能按需…rchitectural Genes):** 骨骼的宏观构型对其整体承...[TRUNCATED]'}
+useAppLogic.ts:328 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+useAppLogic.ts:333 Forcing API key rotation before clarification phase...
+useAppLogic.ts:334 [DEBUG] Keys before rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 1
+useAppLogic.ts:336 [DEBUG] Keys after rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 2, Key to be used: AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '7AuVaORo4pnUyQ_6kKipDA', text: 'Are you interested in analyzing additional biologi…and optimization of novel engineering structures?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…d optimization of novel engineering structures?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '8AuVaMahIYiY1MkPsITvmQw', text: '{"content": "Are you interested in analyzing addit…vel engineering structures?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(3), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'HQyVaNDqOri31MkP0ajB8As', text: 'Are you primarily interested in biological prototy…of these properties, including impact absorption?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r… these properties, including impact absorption?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'IgyVaLL5G8LF1MkP2KygiAg', text: '{"content": "Are you primarily interested in biolo…ncluding impact absorption?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(5), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'QAyVaLeqNIKv1MkP77btuAY', text: 'Are you primarily interested in multi-functional b…it a broader combination of all these properties?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r… a broader combination of all these properties?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'RQyVaMG8Hvme1MkPqc-ByAc', text: '{"content": "Are you primarily interested in multi…on of all these properties?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(7), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'mAyVaI7nMdO11MkPj4GzkAI', text: 'Are you primarily interested in biological prototy…bit a broader integration of all these functions?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…t a broader integration of all these functions?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'nQyVaPvUHJat1MkPt5_1-QE', text: '{"content": "Are you primarily interested in biolo…ion of all these functions?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(9), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '9AyVaKGrI6nUjMcP6tyksAw', text: 'Are you interested in a comprehensive analysis of … prototypes that exemplify the desired functions?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…rototypes that exemplify the desired functions?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '-gyVaKmdAvGJ-sAPlc3j6Aw', text: '{"content": "Are you interested in a comprehensive…lify the desired functions?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(11), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'WA2VaKzXG-HR1MkPlPGv2Ac', text: 'The user wants to analyze the mantis shrimp and ow…se genes contribute to the observed performances.'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r… genes contribute to the observed performances."\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'Xg2VaJn0D7KB1MkP5dSx-AE', text: '{"content": "The user wants to analyze the mantis …o the observed performances.", "type": "summary"}'}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'fw2VaIOVCoGt1MkPi4_PsAc', text: '{\n  "action": "continue_debate",\n  "thought": "As …on to define the theoretical framew...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '0A2VaKzTMfKU1MkPusCb8Aw', text: '{\n  "action": "continue_debate",\n  "thought": "I c…lel analytical structure for the tw...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '5g2VaLrVDYWz1MkPkNHQmQc', text: '{\n  "action": "continue_debate",\n  "thought": "I c…ould analyze how specific structura...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…tion of high-level principles.\n\nGen...[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'QQ6VaJGFLsnD1MkPgfPzsQg', text: 'Of course. Based on the synthesized collaborative …### **1. Abstract (300-500 words)**...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+research.ts:148 Starting/Continuing DYNAMIC CONVERSATIONAL research for: 你是一位精通力学与仿生结构设计的专家。我正在构建一个类比于“人类基因组计划”和“材料基因组计划”的“结构基因”研究体系。我们将“结构基因”定义为标准化、可参数化的结构特征单元，这些单元能够直接影响结构的宏观物理性能，尤其是力学性能。
+本研究提出了一个包含五个正交维度的结构基因分类框架，分别为：
+拓扑基因（Topology Genes）
+几何基因（Geometric Genes）
+构型基因（Architectural Genes）
+组分基因（Constituent Genes）
+工艺基因（Processing Genes）
+这五类结构基因从不同层面描述决定结构性能的关键信息，共同构建出系统化的“结构基因图谱”。
+目前，我已完成论文前两章的大部分撰写工作（见manuscript），下一步将进入第三部分，即案例分析：
+请你围绕三个具有代表性的生物原型进行结构设计案例分析，目标如下：
+分析其结构设计中涉及的关键结构基因；
+明确哪些基因主导了特定力学性能（如刚度、强度、韧性、多功能性等）；
+阐明各类基因的相对作用强度（主要/次要）；
+如有可能，解释其多基因协同机制。
+请优先参考卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'dg6VaJLtI5Oo1MkPhOyLkAg', text: '{\n  "action": "continue_debate",\n  "thought": "1. …lub and the owl feather. The refine...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'iQ6VaOeDJf-v1MkPocGGuQc', text: '{\n  "action": "search",\n  "thought": "1. **Role Ad…ting Sections 3.2 and 3.3 of the ac...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ap: the lack of a unified, comparat...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…f a unified, comparative framework ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…h gap: the lack of a unified, compa...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…f a unified, comparative framework ...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'tw6VaPrjGoiY1MkPsITvmQw', text: 'A Deep Academic Analysis of the Mantis Shrimp Dact…ralized shells of its prey. The clu...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 17, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'xw6VaPOPMv-y1MkPuYvliA8', text: '### **General Section: The Mantis Shrimp Dactyl Cl…ers per second and generating impac...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 18, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'zw6VaO6zEsWj1MkP4YDNqQI', text: '## The Aeroacoustics of Silent Flight: Deconstruct…ical marvel has become a focal poin...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 20, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '1w6VaLHUEcOu1MkPgb-ysAc', text: '## The Silent Architects: Deconstructing the Owl F…geometry of the feather to the micr...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 15, Qualified: 0, Final: 2
+research.ts:63 [Research Optimization] Original: 8, Unique: 8, Selected: 0
+research.ts:64 [Research Optimization] Quality distribution - High: 0, Medium: 0, Low: 8
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '9A6VaKLpOcOz1MkPl6LS-Ac', text: '{\n  "action": "continue_debate",\n  "thought": "1. …ation on the primary functions of b...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'Cg-VaLKMCoKv1MkP77btuAY', text: '{\n  "action": "search",\n  "thought": "1. **Role Ad…ings>`: a lack of specific, quantit...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…p: the lack of a unified, comparati...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…of a unified, comparative framework...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…lly.\n    *   Identify the research ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…he lack of a unified, comparative f...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+executeSingleSearch @ search.ts:150
+(anonymous) @ research.ts:115
+performSearchAndRead @ research.ts:114
+runIterativeDeepResearch @ research.ts:234
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:150
+(anonymous) @ useAppLogic.ts:267
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 2253ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…he lack of a unified, comparative f...[TRUNCATED]', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ZA-VaL2mItmn1MkP3oLzwAc', text: '## The Dactyl Club of the Mantis Shrimp: A Masterc…rch in materials science and biomim...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 19, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'dg-VaNHwO6yz1MkPv-jDgQg', text: '### **Micro-CT Analysis of Owl Feather Velvety Sur…d by the provided academic outline,...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 15, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'kQ-VaNzrHMug1MkP9Y_8wAc', text: 'A Deep Academic Analysis of Nanoindentation Studie…liver devastating blows, generating...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 18, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'qA-VaIexO_uu1MkPjaLP4QE', text: '### **General Section: The Aeroacoustics of Owl-In…lvety dorsal surface on its feather...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 17, Qualified: 0, Final: 2
+research.ts:63 [Research Optimization] Original: 8, Unique: 8, Selected: 0
+research.ts:64 [Research Optimization] Quality distribution - High: 0, Medium: 0, Low: 8
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ww-VaPWDJICr1MkPmLuTkAg', text: '{\n  "action": "continue_debate",\n  "thought": "1. …ndation, particularly for the prima...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '1g-VaKzMLf-y1MkPuYvliA8', text: `{\n  "action": "search",\n  "thought": "I am Agent B…ive Deepening' protocol. My task is...[TRUNCATED]`}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…he extensive research on each syste...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ify the research gap: the lack of a...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…lly.\n    *   Identify the research ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…em individually.\n    *   Identify t...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'LxCVaJeAE82z1MkPlLSzoAc', text: '## The Formation of a Biological Hammer: Unravelin…create this structure is crucial fo...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 20, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'TBCVaOzzMYW_1MkPr8nIsAs', text: '## Academic Review of Vibration Damping in Biologi…o exemplary biological systems: the...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 17, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ZBCVaIamB_OY1MkPj7-a0As', text: '### **Quantitative Analysis of Owl Feather Plumage…sights.\n\n#### **Academic Background...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 17, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ZRCVaNjWA72k1MkP8oHwsQc', text: 'Academic Review: Convergent Evolution in Biomechan… is foundational for deriving robus...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 23, Qualified: 0, Final: 2
+research.ts:63 [Research Optimization] Original: 8, Unique: 8, Selected: 0
+research.ts:64 [Research Optimization] Quality distribution - High: 0, Medium: 0, Low: 8
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'gBCVaO3UHevSjMcPz5nU6Qk', text: '{\n  "action": "continue_debate",\n  "thought": "1. …construction & Analysis:** Our curr...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'kRCVaITZNtfRjMcPpLGRmAo', text: `{\n  "action": "search",\n  "thought": "My role is T…/comparative insights. Alpha's stra...[TRUNCATED]`}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…h on each system individually.\n    ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ch on each system individually.\n   ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…h on each system individually.\n    ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi… system individually.\n    *   Ident...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '7hCVaOvcIYKv1MkP77btuAY', text: '### **Convergent Evolution in Biomechanics: A Foun…ilar form-function relationships pr...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 14, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '8RCVaO36Nbi31MkPyKjB8As', text: '### **Section 4.1.2: Quantitative Analysis of Mant…ithstanding the initial impact with...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 12, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '9xCVaPvWLfGe1MkP64_Q-QE', text: '### **Aeroacoustic Synergy: Deconstructing the Owl…ling-edge (TE) fringe. These featur...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 16, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ARGVaOf6MI2m1MkPz_TwgAc', text: '### **Experimental Measurement of Owl Feather Kera…ovides a strong basis for understan...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 14, Qualified: 0, Final: 2
+research.ts:63 [Research Optimization] Original: 8, Unique: 8, Selected: 0
+research.ts:64 [Research Optimization] Quality distribution - High: 0, Medium: 0, Low: 8
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'IRGVaM3LGM6l1MkPv7DZwAc', text: '{\n  "action": "continue_debate",\n  "thought": "1. …s impact resistance and the owl fea...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'MhGVaJntC4Wz1MkPkNHQmQc', text: '{\n  "action": "search",\n  "thought": "My role is T… strategy to pivot from broad conce...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…h on each system individually.\n    ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ch on each system individually.\n   ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ually.\n    *   Identify the researc...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…search on each system individually....[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'gRGVaKOUOJet1MkP9-LNgAI', text: '### Aeroacoustic Synergy: How Owl Feathers Collabo…least three distinct morphological ...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 13, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'jBGVaMe0O8Wj1MkP4YDNqQI', text: 'Here is a deep academic search and analysis for th…ic challenge, especially for noctur...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 20, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'nBGVaN6EFuac1MkPlanO4AQ', text: '### **Academic Deep Search and Analysis for Sectio…e and material properties of their ...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 15, Qualified: 0, Final: 2
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'tRGVaLuqNdaa1MkP8KqFsA4', text: '### **Quantitative Analysis of Mantis Shrimp Dacty… not merely a function of brute str...[TRUNCATED]'}
+search.ts:44 [Search Optimization] Original: 8, Qualified: 0, Final: 2
+research.ts:63 [Research Optimization] Original: 8, Unique: 8, Selected: 0
+research.ts:64 [Research Optimization] Quality distribution - High: 0, Medium: 0, Low: 8
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+citationManager.ts:187 [Citation Manager] All citations cleared
+synthesis.ts:142 [Synthesis] Initialized citation manager with 0 citations
+synthesis.ts:158 Generating chapter: Of course. Based on the synthesized collaborative strategy of Alpha and Beta, here is a comprehensive academic outline for the proposed research topic. This outline incorporates the final, integrated analytical approach and the elevated ambition for the comparative synthesis....
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nYou are a world-class academic writer. Your task … and biomedical engineering.\n*   **...[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:189 [API Call Timeout] Operation: 'generateContent' timed out after 300000ms.
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateChapter @ synthesis.ts:99
+synthesizeReport @ synthesis.ts:160
+runIterativeDeepResearch @ research.ts:257
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:150
+(anonymous) @ useAppLogic.ts:267
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: signal is aborted without reason
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateChapter @ synthesis.ts:99
+synthesizeReport @ synthesis.ts:160
+runIterativeDeepResearch @ research.ts:257
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:150
+(anonymous) @ useAppLogic.ts:267
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nYou are a world-class academic writer. Your task … and biomedical engineering.\n*   **...[TRUNCATED]', config: {…}}config: {temperature: 0.5}contents: "\nYou are a world-class academic writer. Your task is to write a single, specific chapter for a larger academic review paper based on the provided chapter outline and the full body of research learnings.\n\n**Overall Research Topic:** 你是一位精通力学与仿生结构设计的专家。我正在构建一个类比于“人类基因组计划”和“材料基因组计划”的“结构基因”研究体系。我们将“结构基因”定义为标准化、可参数化的结构特征单元，这些单元能够直接影响结构的宏观物理性能，尤其是力学性能。\n本研究提出了一个包含五个正交维度的结构基因分类框架，分别为：\n拓扑基因（Topology Genes）\n几何基因（Geometric Genes）\n构型基因（Architectural Genes）\n组分基因（Constituent Genes）\n工艺基因（Processing Genes）\n这五类结构基因从不同层面描述决定结构性能的关键信息，共同构建出系统化的“结构基因图谱”。\n目前，我已完成论文前两章的大部分撰写工作（见manuscript），下一步将进入第三部分，即案例分析：\n请你围绕三个具有代表性的生物原型进行结构设计案例分析，目标如下：\n分析其结构设计中涉及的关键结构基因；\n明确哪些基因主导了特定力学性能（如刚度、强度、韧性、多功能性等）；\n阐明各类基因的相对作用强度（主要/次要）；\n如有可能，解释其多基因协同机制。\n请优先参考卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。\n\n\n**Citation Instructions:**\nNo citations are available for this report. Focus on synthesizing the provided research learnings without citation markers.\n\n\n**Full Academic Outline (for context):**\n<FULL_OUTLINE>\nOf course. Based on the synthesized collaborative strategy of Alpha and Beta, here is a comprehensive academic outline for the proposed research topic. This outline incorporates the final, integrated analytical approach and the elevated ambition for the comparative synthesis.\n\n***\n\n### **Academic Review Paper Outline**\n\n**Title:** Structural Genes and Multi-Functionality: A Comparative Mechanistic Analysis of the Mantis Shrimp Dactyl Club and Owl Feather\n\n---\n\n### **1. Abstract (300-500 words)**\n\n*   **Background:** Introduce the challenge of designing synthetic materials that exhibit multiple, often conflicting, high-performance properties (e.g., toughness and light weight). Highlight biomimetics as a promising paradigm for addressing this challenge.\n*   **Problem Statement:** While individual biological systems like the mantis shrimp dactyl club and the owl feather are celebrated for their unique properties, a systematic, comparative framework for understanding *how* their structures generate multi-functionality is lacking.\n*   **Methodology:** This review introduces and applies a \"Structural Genes\" framework to deconstruct and compare these two disparate biological systems. The framework categorizes structural features into five \"genes\": **Topology** (overall organization), **Geometric** (shape and form), **Architectural** (internal arrangement, e.g., helicoids, lattices), **Constituent** (material composition), and **Processing** (formation pathways).\n*   **Analysis:** We analyze how specific combinations of these structural genes contribute to four key functions: impact absorption, vibration damping, noise reduction, and thermal insulation. The analysis explains the underlying mechanical and physical mechanisms by which the gene-function linkage occurs in each system.\n*   **Key Findings:** The comparative analysis reveals both convergent and divergent evolutionary strategies. Convergent principles include the ubiquitous use of hierarchical structures (Architectural/Topological genes) for energy dissipation. Divergent strategies are evident in the material choices (Constituent gene)—biomineralized composites for the mantis shrimp versus keratinous polymers for the owl—tailored to their distinct ecological pressures.\n*   **Conclusion & Implication:** The paper synthesizes these findings into a set of generalizable, bio-inspired design principles for engineering next-generation multi-functional materials. This \"Structural Genes\" framework provides a powerful analytical tool for translating complex biological structures into actionable engineering designs.\n\n---\n\n### **2. Introduction (1000-1500 words)**\n\n*   **2.1 The Engineering Quest for Multi-Functionality:**\n    *   Discuss the limitations of conventional engineering materials, which are often optimized for a single property at the expense of others.\n    *   Introduce the concept of multi-functional materials and their importance in advanced sectors like aerospace, defense, and biomedical engineering.\n*   **...[TRUNCATED]"model: "gemini-2.5-pro"[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'HhOVaLDICpad1MkPwca32Ac', text: '## 4. Main Analysis: A Mechanistic Deconstruction …rgistic interactions that govern th...[TRUNCATED]'}
+synthesis.ts:116 [Synthesis] Chapter contains invalid citation marks: (90) ['Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [3] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [3] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [3] not found in citation manager', 'Citation [4] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [3] not found in citation manager', 'Citation [5] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [5] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [5] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [6] not found in citation manager', 'Citation [6] not found in citation manager', 'Citation [7] not found in citation manager', 'Citation [8] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [5] not found in citation manager', 'Citation [7] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [7] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [7] not found in citation manager', 'Citation [8] not found in citation manager', 'Citation [1] not found in citation manager', 'Citation [2] not found in citation manager', 'Citation [7] not found in citation manager', 'Citation [8] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [11] not found in citation manager', 'Citation [12] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [12] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [14] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [14] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [13] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [10] not found in citation manager', 'Citation [13] not found in citation manager', 'Citation [13] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [16] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [16] not found in citation manager', 'Citation [16] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [15] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [17] not found in citation manager', 'Citation [18] not found in citation manager', 'Citation [17] not found in citation manager', 'Citation [18] not found in citation manager', 'Citation [17] not found in citation manager', 'Citation [18] not found in citation manager', 'Citation [9] not found in citation manager', 'Citation [17] not found in citation manager', 'Citation [18] not found in citation manager', 'Citation [17] not found in citation manager']
+generateChapter @ synthesis.ts:116
+await in generateChapter
+synthesizeReport @ synthesis.ts:160
+runIterativeDeepResearch @ research.ts:257
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:150
+(anonymous) @ useAppLogic.ts:267
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+synthesis.ts:120 [Synthesis] Chapter generated with citation marks validated
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: '\nYou are a relevance scoring expert. Your task is …roduce the two exemplary case studi...[TRUNCATED]', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'JhOVaKvDJO6t1MkP84aLkAc', text: '{\n  "reasoning": "The report snippet perfectly ali…et, though truncated, clearly addre...[TRUNCATED]'}
+NotificationContext.tsx:30 Encountered two children with the same key, `1754600231071`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+(anonymous) @ react-dom_client.js?v=f966d72e:5749
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+warnOnInvalidKey @ react-dom_client.js?v=f966d72e:5748
+reconcileChildrenArray @ react-dom_client.js?v=f966d72e:5789
+reconcileChildFibersImpl @ react-dom_client.js?v=f966d72e:5995
+(anonymous) @ react-dom_client.js?v=f966d72e:6061
+reconcileChildren @ react-dom_client.js?v=f966d72e:6444
+beginWork @ react-dom_client.js?v=f966d72e:7830
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<NotificationToast>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ NotificationContext.tsx:30
+NotificationProvider @ NotificationContext.tsx:29
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+NotificationContext.tsx:30 Encountered two children with the same key, `1754600231071`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+(anonymous) @ react-dom_client.js?v=f966d72e:5749
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+warnOnInvalidKey @ react-dom_client.js?v=f966d72e:5748
+reconcileChildrenArray @ react-dom_client.js?v=f966d72e:5789
+reconcileChildFibersImpl @ react-dom_client.js?v=f966d72e:5995
+(anonymous) @ react-dom_client.js?v=f966d72e:6061
+reconcileChildren @ react-dom_client.js?v=f966d72e:6444
+beginWork @ react-dom_client.js?v=f966d72e:7830
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<NotificationToast>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ NotificationContext.tsx:30
+NotificationProvider @ NotificationContext.tsx:29
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+useCitationInteraction.ts:100 Citation with ID 1 not found
+(anonymous) @ useCitationInteraction.ts:100
+handleClick @ MarkdownRenderer.tsx:32
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<span>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+CitationLink @ MarkdownRenderer.tsx:50
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<CitationLink>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+parseCitationMarks @ MarkdownRenderer.tsx:156
+(anonymous) @ MarkdownRenderer.tsx:187
+(anonymous) @ chunk-OBZFCJRS.js?v=f966d72e:341
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:286
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:303
+mapChildren @ chunk-OBZFCJRS.js?v=f966d72e:340
+p @ MarkdownRenderer.tsx:185
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<p>
+exports.jsxs @ react-markdown.js?v=f966d72e:547
+create2 @ react-markdown.js?v=f966d72e:2742
+element @ react-markdown.js?v=f966d72e:2676
+one @ react-markdown.js?v=f966d72e:2638
+createChildren @ react-markdown.js?v=f966d72e:2845
+root @ react-markdown.js?v=f966d72e:2718
+one @ react-markdown.js?v=f966d72e:2650
+toJsxRuntime @ react-markdown.js?v=f966d72e:2625
+post @ react-markdown.js?v=f966d72e:7448
+Markdown @ react-markdown.js?v=f966d72e:7366
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<Markdown>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+MarkdownRenderer @ MarkdownRenderer.tsx:178
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<MarkdownRenderer>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+FinalReport @ FinalReport.tsx:70
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<FinalReport>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:260
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+useCitationInteraction.ts:100 Citation with ID 9 not found
+(anonymous) @ useCitationInteraction.ts:100
+handleClick @ MarkdownRenderer.tsx:32
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<span>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+CitationLink @ MarkdownRenderer.tsx:50
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<CitationLink>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+parseCitationMarks @ MarkdownRenderer.tsx:156
+(anonymous) @ MarkdownRenderer.tsx:187
+(anonymous) @ chunk-OBZFCJRS.js?v=f966d72e:341
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:286
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:303
+mapChildren @ chunk-OBZFCJRS.js?v=f966d72e:340
+p @ MarkdownRenderer.tsx:185
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<p>
+exports.jsxs @ react-markdown.js?v=f966d72e:547
+create2 @ react-markdown.js?v=f966d72e:2742
+element @ react-markdown.js?v=f966d72e:2676
+one @ react-markdown.js?v=f966d72e:2638
+createChildren @ react-markdown.js?v=f966d72e:2845
+root @ react-markdown.js?v=f966d72e:2718
+one @ react-markdown.js?v=f966d72e:2650
+toJsxRuntime @ react-markdown.js?v=f966d72e:2625
+post @ react-markdown.js?v=f966d72e:7448
+Markdown @ react-markdown.js?v=f966d72e:7366
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<Markdown>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+MarkdownRenderer @ MarkdownRenderer.tsx:178
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<MarkdownRenderer>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+FinalReport @ FinalReport.tsx:70
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<FinalReport>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:260
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+useCitationInteraction.ts:100 Citation with ID 9 not found
+(anonymous) @ useCitationInteraction.ts:100
+handleClick @ MarkdownRenderer.tsx:32
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<span>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+CitationLink @ MarkdownRenderer.tsx:50
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<CitationLink>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+parseCitationMarks @ MarkdownRenderer.tsx:156
+(anonymous) @ MarkdownRenderer.tsx:187
+(anonymous) @ chunk-OBZFCJRS.js?v=f966d72e:341
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:286
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:303
+mapChildren @ chunk-OBZFCJRS.js?v=f966d72e:340
+p @ MarkdownRenderer.tsx:185
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<p>
+exports.jsxs @ react-markdown.js?v=f966d72e:547
+create2 @ react-markdown.js?v=f966d72e:2742
+element @ react-markdown.js?v=f966d72e:2676
+one @ react-markdown.js?v=f966d72e:2638
+createChildren @ react-markdown.js?v=f966d72e:2845
+root @ react-markdown.js?v=f966d72e:2718
+one @ react-markdown.js?v=f966d72e:2650
+toJsxRuntime @ react-markdown.js?v=f966d72e:2625
+post @ react-markdown.js?v=f966d72e:7448
+Markdown @ react-markdown.js?v=f966d72e:7366
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<Markdown>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+MarkdownRenderer @ MarkdownRenderer.tsx:178
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<MarkdownRenderer>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+FinalReport @ FinalReport.tsx:70
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<FinalReport>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:260
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+useCitationInteraction.ts:100 Citation with ID 9 not found
+(anonymous) @ useCitationInteraction.ts:100
+handleClick @ MarkdownRenderer.tsx:32
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<span>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+CitationLink @ MarkdownRenderer.tsx:50
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<CitationLink>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+parseCitationMarks @ MarkdownRenderer.tsx:156
+(anonymous) @ MarkdownRenderer.tsx:187
+(anonymous) @ chunk-OBZFCJRS.js?v=f966d72e:341
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:286
+mapIntoArray @ chunk-OBZFCJRS.js?v=f966d72e:303
+mapChildren @ chunk-OBZFCJRS.js?v=f966d72e:340
+p @ MarkdownRenderer.tsx:185
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<p>
+exports.jsxs @ react-markdown.js?v=f966d72e:547
+create2 @ react-markdown.js?v=f966d72e:2742
+element @ react-markdown.js?v=f966d72e:2676
+one @ react-markdown.js?v=f966d72e:2638
+createChildren @ react-markdown.js?v=f966d72e:2845
+root @ react-markdown.js?v=f966d72e:2718
+one @ react-markdown.js?v=f966d72e:2650
+toJsxRuntime @ react-markdown.js?v=f966d72e:2625
+post @ react-markdown.js?v=f966d72e:7448
+Markdown @ react-markdown.js?v=f966d72e:7366
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11254
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<Markdown>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+MarkdownRenderer @ MarkdownRenderer.tsx:178
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<MarkdownRenderer>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+FinalReport @ FinalReport.tsx:70
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<FinalReport>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:260
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36

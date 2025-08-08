@@ -1,0 +1,51 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=b9e4f8d5:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+:9876/favicon.ico:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: Object
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'n5CUaKWMA-baqtsP-8jC0AY', text: '好的，我们来着手进行这项“结构基因”的案例分析工作。您提出的五维“结构基因”分类框架（拓扑、几何、构…:** **主要作用**。鸟喙的宏观构型是典型的“三明治夹芯结构”。外...[TRUNCATED]'}
+geminiClient.ts:184 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: require is not defined
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:184 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...HmE0. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:184 [API Call Failed: Attempt 3/6] Operation: 'generateContent' with key ...GrtY. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 4/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:184 [API Call Failed: Attempt 4/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 5/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:184 [API Call Failed: Attempt 5/6] Operation: 'generateContent' with key ...HmE0. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 6/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '65GUaOTdLIjUz7IP3beziAE', text: '## “结构基因”解码自然造物：三种典型生物原型的结构设计智慧\n\n力学与仿生结构设计专家，您好。您所…泡沫结构由相互连接的纤维网络构成，形成了复杂的闭孔拓扑形态。 这种拓扑...[TRUNCATED]'}
+geminiClient.ts:184 [API Call Failed: Attempt 6/6] Operation: 'generateContent' with key ...GrtY. Error: require is not defined
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:229 [API Error: All Keys Failed] Operation: 'generateContent'. Last error: require is not defined
+executeWithRetry @ geminiClient.ts:229
+geminiClient.ts:230 [API Error] Failed Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+executeWithRetry @ geminiClient.ts:230
+useAppLogic.ts:337 Initial search failed: AllKeysFailedError: All API keys failed. Last error: require is not defined
+    at executeWithRetry (geminiClient.ts:231:11)
+    at async executeSingleSearch (search.ts:150:47)
+    at async Promise.all (:9876/index 0)
+    at async useAppLogic.ts:292:35
+(anonymous) @ useAppLogic.ts:337

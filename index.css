@@ -7,3 +7,44 @@ body {
   background-image: linear-gradient(135deg, #1f2128 0%, #121212 100%);
   color: #e1e1e1;
 }
+
+/* 引文高亮动画效果 */
+.citation-highlight {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-left: 4px solid #3b82f6 !important;
+  padding-left: 12px !important;
+  transition: all 0.3s ease !important;
+  animation: citation-pulse 1s ease-in-out;
+}
+
+.dark .citation-highlight {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  border-left-color: #60a5fa !important;
+}
+
+@keyframes citation-pulse {
+  0% {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.3);
+    transform: scale(1.01);
+  }
+  100% {
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: scale(1);
+  }
+}
+
+.dark @keyframes citation-pulse {
+  0% {
+    background-color: rgba(59, 130, 246, 0.25);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.35);
+  }
+  100% {
+    background-color: rgba(59, 130, 246, 0.15);
+  }
+}

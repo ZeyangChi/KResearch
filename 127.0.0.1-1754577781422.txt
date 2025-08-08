@@ -1,0 +1,515 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: Object
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'zrKUaK6AH8mfz7IPi9TasQI', text: ''}
+useAppLogic.ts:320 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+useAppLogic.ts:325 Forcing API key rotation before clarification phase...
+useAppLogic.ts:326 [DEBUG] Keys before rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 0
+useAppLogic.ts:328 [DEBUG] Keys after rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 1, Key to be used: AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '17KUaN7DO6mez7IP17moqAI', text: '您希望分析的生物原型是更侧重于具有卓越单一力学性能（如超高强度、韧性或刚度）的结构，还是更倾向于展现多功能性（如兼具轻质、吸能、自修复等）的复杂结构？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…高强度、韧性或刚度）的结构，还是更倾向于展现多功能性（如兼具轻质、吸能、自修复等）的复杂结构？"\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '3LKUaNm4Mbrjz7IP0PqgiQE', text: '{"content": "您希望分析的生物原型是更侧重于具有卓越单一力学性能（如超高强度、韧性或刚度…展现多功能性（如兼具轻质、吸能、自修复等）的复杂结构？", "type": "question"}'}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(3), config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '_bKUaOShIqSdz7IPmsjQ6A8', text: '您希望选择的三个生物原型是各自侧重于其中一到两种功能（如冲击吸能与减振），还是希望每个原型都能体现出多种功能的协同作用，即使其中某一种功能更为突出？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…如冲击吸能与减振），还是希望每个原型都能体现出多种功能的协同作用，即使其中某一种功能更为突出？"\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'ArOUaLfWDtCJz7IP-oOlwQ8', text: '{"content": "您希望选择的三个生物原型是各自侧重于其中一到两种功能（如冲击吸能与减振），…体现出多种功能的协同作用，即使其中某一种功能更为突出？", "type": "question"}'}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(5), config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'MbOUaN3HOe3LqtsPndzKIA', text: '该研究将围绕三个具有代表性的生物原型进行结构设计案例分析，重点探讨其在冲击吸能、减振、降噪和隔热等多…基因对特定力学性能的主导作用及相对强度，并阐明其多基因协同机制，主要参考卢天健教授团队的研究工作。'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…对特定力学性能的主导作用及相对强度，并阐明其多基因协同机制，主要参考卢天健教授团队的研究工作。"\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'N7OUaNHkG_-ImtkPld3yYQ', text: '{"content": "该研究将围绕三个具有代表性的生物原型进行结构设计案例分析，重点探讨其在冲击…阐明其多基因协同机制，主要参考卢天健教授团队的研究工作。", "type": "summary"}'}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'X7OUaJGpNt-sqtsP-fqcCQ', text: '{\n  "action": "continue_debate",\n  "thought": "As …rmat but also be explicitly designe...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'krOUaJX1IYHjz7IP7NnD4QM', text: ''}
+academicOutline.ts:208 [Academic Outline] Agent Alpha (Turn 1, Attempt 1/2) returned an empty response. Checking for block reasons... {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'krOUaJX1IYHjz7IP7NnD4QM', text: ''}
+generateAcademicOutline @ academicOutline.ts:208
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'trOUaO-WBYnVz7IPh9L6qAI', text: '{\n  "action": "continue_debate",\n  "thought": "As …he stage for a rigorous analysis, r...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'uLOUaMrrNpHRz7IPwPbF4Q8', text: ''}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '1bOUaNfwGtqsz7IPlZi42AQ', text: '{\n  "action": "continue_debate",\n  "thought": "I c…dies in Section 4. This template wi...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '2bOUaKiNF_Csz7IPprGyyA8', text: ''}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent 500 (Internal Server Error)
+executeWithRetry @ geminiClient.ts:132
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:195
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:184 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+executeWithRetry @ geminiClient.ts:184
+await in executeWithRetry
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:195
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:220 [API Retry] Server error (500). Applying exponential backoff of 4025ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '-bOUaIzQA-rBz7IP5Pm12A8', text: '{\n  "action": "continue_debate",\n  "thought": "Age…e for this central analysis. A well...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'GLSUaMXUIMGez7IP2s_f-AE', text: '{\n  "action": "continue_debate",\n  "thought": "I c… targeted literature review to iden...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'QbSUaNSqENrVz7IPt7_owA8', text: ''}
+academicOutline.ts:208 [Academic Outline] Agent Beta (Turn 4, Attempt 1/2) returned an empty response. Checking for block reasons... {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'QbSUaNSqENrVz7IPt7_owA8', text: ''}
+generateAcademicOutline @ academicOutline.ts:208
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ZLSUaJ2ULO2Cz7IP5tWt2QY', text: '{\n  "action": "continue_debate",\n  "thought": "I c…: the Introduction will establish t...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent 500 (Internal Server Error)
+executeWithRetry @ geminiClient.ts:132
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:177
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:184 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+executeWithRetry @ geminiClient.ts:184
+await in executeWithRetry
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:177
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:220 [API Retry] Server error (500). Applying exponential backoff of 4522ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent 500 (Internal Server Error)
+executeWithRetry @ geminiClient.ts:132
+await in executeWithRetry
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:177
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:184 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...HmE0. Error: An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+executeWithRetry @ geminiClient.ts:184
+await in executeWithRetry
+generateContent @ geminiClient.ts:239
+generateAcademicOutline @ academicOutline.ts:177
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:220 [API Retry] Server error (500). Applying exponential backoff of 8374ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ebSUaLZvkNHPsg_1j8_gDw', text: ''}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'fbSUaMLGB-6Jz7IP5ZSP8A8', text: ''}
+academicOutline.ts:208 [Academic Outline] Agent Alpha (Turn 5, Attempt 1/2) returned an empty response. Checking for block reasons... {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'fbSUaMLGB-6Jz7IP5ZSP8A8', text: ''}
+generateAcademicOutline @ academicOutline.ts:208
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'gLSUaLKJK5LVz7IP_eWasAI', text: ''}
+academicOutline.ts:208 [Academic Outline] Agent Alpha (Turn 5, Attempt 2/2) returned an empty response. Checking for block reasons... {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'gLSUaLKJK5LVz7IP_eWasAI', text: ''}
+generateAcademicOutline @ academicOutline.ts:208
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+academicOutline.ts:230 [Academic Outline] Agent Alpha failed to provide a valid response after 2 attempts. Skipping turn.
+generateAcademicOutline @ academicOutline.ts:230
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp… Conclusion (Section 7). My goal is...[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'hLSUaIikJdvUz7IPpu_jmQI', text: ''}
+academicOutline.ts:286 [Academic Outline] Final generation failed. Response was empty. {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'hLSUaIikJdvUz7IPpu_jmQI', text: ''}
+generateAcademicOutline @ academicOutline.ts:286
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+useAppLogic.ts:244 Academic outline generation failed: Error: Failed to generate academic outline due to an empty response from the API.
+    at generateAcademicOutline (academicOutline.ts:290:15)
+(anonymous) @ useAppLogic.ts:244
+Promise.catch
+(anonymous) @ useAppLogic.ts:239
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms

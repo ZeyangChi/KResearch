@@ -1,8 +1,10 @@
 import { ai } from './geminiClient';
 import { getModel } from './models';
 import { parseJsonFromMarkdown } from './utils';
-import { ResearchMode, FileData, Role, AgentPersona } from '../types';
+import { ResearchMode, FileData, Role, AgentPersona, DebateUpdate } from '../types';
 import { apiKeyService } from './apiKeyService';
+import { settingsService } from './settingsService';
+import { researchContext } from './researchContext';
 
 const getRoleContext = (role: Role | null): string => {
     if (!role) return '';
@@ -110,9 +112,14 @@ export const generateAcademicOutline = async (
     mode: ResearchMode,
     fileData: FileData | null,
     role: Role | null,
-    signal?: AbortSignal
+    signal?: AbortSignal,
+    onDebateUpdate?: (update: DebateUpdate) => void
 ): Promise<string> => {
-    const maxDebateRounds = 4; // Limit debate rounds for academic outline
+    // 设置研究上下文
+    researchContext.setMode(mode);
+
+    const { researchParams } = settingsService.getSettings();
+    const maxDebateRounds = researchParams.maxDebateRounds;
     let debateTurns = 0;
     let currentConversation: Array<{ persona: AgentPersona; thought: string }> = [];
     let nextPersona: AgentPersona = 'Alpha';
@@ -167,24 +174,109 @@ export const generateAcademicOutline = async (
             }
         }
 
-        const response = await ai.models.generateContent({
-            model: getModel('academicOutline', mode),
-            contents: { parts },
-            config: {
-                responseMimeType: "application/json",
-                temperature: 0.7,
-                responseSchema: academicOutlineTurnSchema
-            }
-        }, signal);
-        
         checkSignal();
-        const parsedResponse = parseJsonFromMarkdown(response.text) as AcademicOutlineTurn;
+        let parsedResponse: AcademicOutlineTurn | null = null;
+        let turnSuccessful = false;
+        const maxTurnRetries = 2;
+
+        for (let turnAttempt = 1; turnAttempt <= maxTurnRetries; turnAttempt++) {
+            checkSignal();
+
+            const response = await ai.models.generateContent({
+                model: getModel('academicOutline', mode),
+                contents: { parts },
+                config: {
+                    responseMimeType: "application/json",
+                    temperature: 0.7,
+                    responseSchema: academicOutlineTurnSchema
+                }
+            }, signal);
+            
+            checkSignal();
+
+            if (!response.text || response.text.trim() === '') {
+                console.warn(`[Academic Outline] Agent ${nextPersona} (Turn ${debateTurns}, Attempt ${turnAttempt}/${maxTurnRetries}) returned an empty response.`);
+                console.warn(`[Academic Outline] Response details:`, {
+                    hasText: !!response.text,
+                    textLength: response.text?.length || 0,
+                    hasPromptFeedback: !!response.promptFeedback,
+                    blockReason: response.promptFeedback?.blockReason,
+                    modelVersion: response.modelVersion
+                });
+
+                if (response.promptFeedback?.blockReason) {
+                    console.error(`[Academic Outline] Request blocked by API. Reason: ${response.promptFeedback.blockReason}`);
+                }
+
+                if (turnAttempt < maxTurnRetries) {
+                    // 渐进式重试间隔：3s -> 6s
+                    const retryDelay = turnAttempt === 1 ? 3000 : 6000;
+                    console.log(`[Academic Outline] Waiting ${retryDelay}ms before retry attempt ${turnAttempt + 1}...`);
+                    await new Promise(res => setTimeout(res, retryDelay));
+                }
+                continue; // Next attempt
+            }
+
+            const tempParsed = parseJsonFromMarkdown(response.text) as AcademicOutlineTurn;
+
+            if (!tempParsed || !tempParsed.thought) {
+                console.warn(`[Academic Outline] Agent ${nextPersona} (Turn ${debateTurns}, Attempt ${turnAttempt}/${maxTurnRetries}) returned invalid JSON or empty thought.`);
+                console.warn(`[Academic Outline] Parse details:`, {
+                    hasParsedResult: !!tempParsed,
+                    hasThought: !!(tempParsed?.thought),
+                    thoughtLength: tempParsed?.thought?.length || 0,
+                    action: tempParsed?.action,
+                    rawTextLength: response.text?.length || 0,
+                    rawTextPreview: response.text?.substring(0, 200) + (response.text?.length > 200 ? '...' : '')
+                });
+
+                if (turnAttempt < maxTurnRetries) {
+                    // 渐进式重试间隔：3s -> 6s
+                    const retryDelay = turnAttempt === 1 ? 3000 : 6000;
+                    console.log(`[Academic Outline] JSON parse failed, waiting ${retryDelay}ms before retry attempt ${turnAttempt + 1}...`);
+                    await new Promise(res => setTimeout(res, retryDelay));
+                }
+                continue; // Next attempt
+            }
+
+            parsedResponse = tempParsed;
+            turnSuccessful = true;
+            break; // Success, exit turn retry loop
+        }
+
+        if (!turnSuccessful || !parsedResponse) {
+            console.error(`[Academic Outline] Agent ${nextPersona} failed to provide a valid response after ${maxTurnRetries} attempts.`);
+            console.error(`[Academic Outline] Turn failure details:`, {
+                currentTurn: debateTurns,
+                maxTurns: maxDebateRounds,
+                failedAgent: nextPersona,
+                conversationLength: currentConversation.length,
+                hasAnyConversation: currentConversation.length > 0
+            });
+
+            // 不要直接跳过，而是尝试让另一个Agent继续
+            // 如果两个Agent都连续失败，才考虑跳过
+            console.warn(`[Academic Outline] Attempting to continue with other agent instead of skipping turn...`);
+            debateTurns++;
+            nextPersona = nextPersona === 'Alpha' ? 'Beta' : 'Alpha'; // Switch persona for next round
+            continue;
+        }
 
         // Add to conversation history
         currentConversation.push({
             persona: nextPersona,
             thought: parsedResponse.thought
         });
+
+        // 调用辩论更新回调
+        if (onDebateUpdate) {
+            onDebateUpdate({
+                id: Date.now() + Math.random(),
+                persona: nextPersona,
+                thought: parsedResponse.thought,
+                timestamp: Date.now()
+            });
+        }
 
         // Check if we should finalize the outline
         if (parsedResponse.action === 'finalize_outline' && parsedResponse.final_outline) {
@@ -220,7 +312,11 @@ Each section should include detailed subsections and content specifications. For
     }, signal);
 
     if (!finalResponse || !finalResponse.text) {
-        throw new Error("Failed to generate academic outline");
+        console.error(`[Academic Outline] Final generation failed. Response was empty.`, finalResponse);
+        if (finalResponse.promptFeedback?.blockReason) {
+            throw new Error(`Failed to generate final academic outline: Request was blocked by the API. Reason: ${finalResponse.promptFeedback.blockReason}`);
+        }
+        throw new Error("Failed to generate academic outline due to an empty response from the API.");
     }
 
     return finalResponse.text.trim();

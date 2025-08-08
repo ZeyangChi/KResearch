@@ -5,6 +5,8 @@ export class AllKeysFailedError extends Error {
     }
 }
 
+import { ResearchMode } from '../types';
+
 const API_KEYS_STORAGE_KEY = 'gemini_api_keys';
 const API_BASE_URL_STORAGE_KEY = 'gemini_api_base_url';
 const DEFAULT_API_BASE_URL = 'https://generativelanguage.googleapis.com';
@@ -15,14 +17,13 @@ class ApiKeyService {
     private readonly hasEnvKey: boolean;
     private currentKeyIndex = -1;
     private apiBaseUrl: string;
-    private resetTimeoutId: NodeJS.Timeout | null = null;
 
     constructor() {
         const envKey = process.env.API_KEY;
         this.hasEnvKey = !!envKey && envKey.length > 0;
 
         if (this.hasEnvKey) {
-            this.userApiKeys = this.parseKeys(envKey);
+            this.userApiKeys = this.parseKeys(envKey || '');
         } else {
             try {
                 const storedKeys = localStorage.getItem(API_KEYS_STORAGE_KEY);
@@ -107,27 +108,6 @@ class ApiKeyService {
 
     public reset(): void {
         this.currentKeyIndex = -1;
-        // 清除任何待执行的延迟重置
-        if (this.resetTimeoutId) {
-            clearTimeout(this.resetTimeoutId);
-            this.resetTimeoutId = null;
-        }
-    }
-
-    public delayedReset(delayMs: number = 5000): void {
-        // 清除之前的延迟重置
-        if (this.resetTimeoutId) {
-            clearTimeout(this.resetTimeoutId);
-        }
-
-        // 设置新的延迟重置
-        this.resetTimeoutId = setTimeout(() => {
-            this.currentKeyIndex = -1;
-            this.resetTimeoutId = null;
-            console.log(`[API Key Service] Delayed reset completed after ${delayMs}ms`);
-        }, delayMs);
-
-        console.log(`[API Key Service] Scheduled delayed reset in ${delayMs}ms`);
     }
 }
 

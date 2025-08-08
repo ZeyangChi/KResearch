@@ -1,0 +1,572 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+citationManager.ts:12 [Citation Manager] Initialized
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: Object
+generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent:1  Failed to load resource: net::ERR_CONNECTION_CLOSED
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 2235ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...HmE0. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 4661ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:194 [API Call Failed: Attempt 3/6] Operation: 'generateContent' with key ...GrtY. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 2044ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 4/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:194 [API Call Failed: Attempt 4/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 4645ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 5/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'GDOVaOORAYT_ugeO1vWwBw', text: '### 仿生结构设计基因图谱：三大生物原型案例解析\n\n为了构建“结构基因”研究体系，本文以龟壳、啄木…的韧性。\n    *   **几何基因 (Geometric Gene...[TRUNCATED]'}
+useAppLogic.ts:294 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+useAppLogic.ts:299 Forcing API key rotation before clarification phase...
+useAppLogic.ts:300 [DEBUG] Keys before rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 1
+useAppLogic.ts:302 [DEBUG] Keys after rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 2, Key to be used: AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'JDOVaI69BuSo1MkP5ePFuQc', text: '鉴于已完成的生物原型案例分析，您下一步是希望探讨如何将这些发现系统化，以构建通用的“结构基因图谱”和识别方法，还是更侧重于如何将此“结构基因”框架应用于新型仿生结构的逆向设计与优化？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…基因图谱”和识别方法，还是更侧重于如何将此“结构基因”框架应用于新型仿生结构的逆向设计与优化？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'KTOVaOSFDsaf1MkP-a2gwAg', text: '{"content": "鉴于已完成的生物原型案例分析，您下一步是希望探讨如何将这些发现系统化，以构…此“结构基因”框架应用于新型仿生结构的逆向设计与优化？", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(3), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'UDOVaPf0BI-s1MkPhYG1qAs', text: '您是希望重点分析生物结构在降噪或隔热方面的结构基因及其力学机理，还是希望研究同时具备冲击吸能、减振、降噪或隔热中多种功能的生物结构原型？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…结构基因及其力学机理，还是希望研究同时具备冲击吸能、减振、降噪或隔热中多种功能的生物结构原型？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'VTOVaKSzBcCd1MkPmbKqkAc', text: '{"content":"您是希望重点分析生物结构在降噪或隔热方面的结构基因及其力学机理，还是希望研究同时具备冲击吸能、减振、降噪或隔热中多种功能的生物结构原型？","type":"question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(5), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'fjOVaKCWM_211MkPg8it6Ag', text: '您是希望重点分析生物结构在**降噪**、**隔热**或**减振**方面的结构基因及其力学机理，还是希望针对如螳螂虾这类生物，深入探讨其**独特**的冲击吸能机制？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…面的结构基因及其力学机理，还是希望针对如螳螂虾这类生物，深入探讨其**独特**的冲击吸能机制？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'gzOVaI2TNM7C1MkP_vbykQc', text: '{"content":"您是希望重点分析生物结构在**降噪**、**隔热**或**减振**方面的结构…对如螳螂虾这类生物，深入探讨其**独特**的冲击吸能机制？","type":"question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(7), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '0jOVaM7TE_211MkPg8it6Ag', text: '您是希望重点研究螳螂虾的超高性能冲击吸能机制，还是更关注猫头鹰羽毛的降噪机制，亦或是探索其他生物原型在减振或隔热方面的结构基因及其力学机理？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…还是更关注猫头鹰羽毛的降噪机制，亦或是探索其他生物原型在减振或隔热方面的结构基因及其力学机理？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '1zOVaP6uBbPU1MkPl4G_qAk', text: '{"content": "您是希望重点研究螳螂虾的超高性能冲击吸能机制，还是更关注猫头鹰羽毛的降噪机…索其他生物原型在减振或隔热方面的结构基因及其力学机理？", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(9), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'CDSVaJfLA-Gl1MkPlO3JyQg', text: 'The user wants to analyze three distinct biologica…** Focusing on its thermal insulation properties.'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r… Focusing on its thermal insulation properties."\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'DTSVaJvZDYag1MkPlbOY-Ag', text: '{"content":"The user wants to analyze three distin…g on its thermal insulation propert...[TRUNCATED]'}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...GrtY. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:185
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 2741ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'MjSVaNzAMZyk1MkP0sbpmQc', text: '{\n  "action": "continue_debate",\n  "thought": "As …omimicry, structure-property relati...[TRUNCATED]'}
+utils.ts:27 Failed to parse JSON response, even after attempting to fix. SyntaxError: Unterminated string in JSON at position 4991 (line 4 column 3663)
+    at JSON.parse (<anonymous>)
+    at parseJsonFromMarkdown (utils.ts:25:21)
+    at generateAcademicOutline (academicOutline.ts:220:32) Original text: {
+  "action": "continue_debate",
+  "thought": "As the Chief Academic Strategist, my primary goal is to establish a robust and logical framework for this review paper. The proposed structure is designed to be comprehensive and to facilitate a deep, comparative analysis rather than a simple serial description of the three prototypes. I've initiated the structure with a broad theoretical foundation in Section 2, which establishes the core scientific principles (biomimicry, structure-property relationships) that will serve as the analytical lens for the entire paper. The core of the paper, Section 3, is structured as parallel case studies. This parallelism is critical; it ensures that each prototype is analyzed using a consistent set of criteria (Biological Context, Structure, Mechanism, Application), which will be essential for the subsequent comparative synthesis in Section 4. Section 4 is the intellectual core of a high-level review, moving beyond description to synthesis, comparison, and the identification of unifying principles. This elevates the paper from a summary to a scholarly contribution. The conclusion is designed to explicitly answer the research questions posed in the introduction, ensuring a cohesive and complete argument. I am proposing this high-level structure for discussion and refinement.",
+  "outline_section": "# Academic Review Outline Proposal\n\n**Title:** Biomimetic Prototypes: A Comparative Review of Structural and Mechanical Performance in Mantis Shrimp, Owl Feathers, and Polar Bear Fur\n\n**Estimated Word Count:** 8,000 - 12,000 words\n\n**1.0 Abstract**\n   - **1.1** Background: Introduction to biomimicry as a source for high-performance materials.\n   - **1.2** Scope: Focus on three distinct prototypes (Mantis Shrimp, Owl Feather, Polar Bear Fur) and their respective mechanical advantages (impact resistance, noise reduction, thermal insulation).\n   - **1.3** Methodology: A comprehensive literature review and synthesis of structural-functional relationships.\n   - **1.4** Key Synthesis: High-level summary of the unifying principles (e.g., hierarchical structures, material gradients) and their implications for engineering design.\n   - **1.5** Keywords: Biomimicry, Structure-Property Relationship, Mantis Shrimp, Owl Feather, Polar Bear Fur, Impact Resistance, Aeroacoustics, Thermal Insulation.\n\n**2.0 Introduction**\n   - **2.1** The Imperative for Advanced Materials in Modern Engineering.\n   - **2.2** Nature as a Source of Inspiration: The Field of Biomimicry.\n   - **2.3** Research Gap: Lack of a comparative synthesis across different physical domains (mechanical, acoustic, thermal) using these specific, high-performing biological exemplars.\n   - **2.4** Research Questions and Objectives:\n       - Primary Question: What are the fundamental structural design principles that govern the unique mechanical performance of these three prototypes?\n       - Secondary Question: How do these principles converge or diverge across different biological systems and physical challenges?\n       - Objective: To synthesize the current state of knowledge and propose a unified framework for understanding and translating these biological mechanisms into engineering applications.\n   - **2.5** Structure of the Review.\n\n**3.0 Theoretical Framework: Principles of Structure-Function in Biological Materials**\n   - **3.1** The Concept of Hierarchical Structures: From Nano to Macro Scale.\n   - **3.2** Key Mechanical Concepts for Analysis:\n       - **3.2.1** Solid Mechanics: Toughness, Fracture Mechanics, and Energy Absorption.\n       - **3.2.2** Fluid Dynamics and Acoustics: Turbulence, Boundary Layers, and Noise Generation/Suppression.\n       - **3.2.3** Thermodynamics and Heat Transfer: Conduction, Convection, Radiation, and Insulation.\n\n**4.0 Analysis of Biological Prototypes: Case Studies**\n   - **4.1 Case Study 1: The Mantis Shrimp Dactyl Club – A Paradigm of Impact Toughness**\n       - **4.1.1** Biological Context and Performance Requirements.\n       - **4.1.2** Multi-Scale Structural Analysis (Impact, Periodic, Bouligand Regions).\n       - **4.1.3** Governing Mechanical Mechanisms (Crack Torsion, Energy Dissipation).\n       - **4.1.4** State-of-the-Art Biomimetic Applications and Future Prospects.\n   - **4.2 Case Study 2: The Owl Feather – A Masterclass in Silent Flight**\n       - **4.2.1** Biological Context and Predatory Advantage.\n       - **4.2.2** Analysis of Key Feather Morphologies (Leading-Edge Serrations, Trailing-Edge Fringe, Velvety Pile).\n       - **4.2.3** Governing Aeroacoustic Mechanisms (Turbulence Manipulation, Noise Suppression).\n       - **4.2.4** State-of-the-Art Biomimetic Applications and Future Prospects.\n   - **4.3 Case Study 3: The Polar Bear Fur – A Model for Thermal Insulation**\n       - **4.3.1** Biological Context and Environmental Adaptation.\n       - **4.3.2** Analysis of the Core-Sheath Hair Structure and Fur Layering.\n       - **4. Attempted JSON string: {
+  "action": "continue_debate",
+  "thought": "As the Chief Academic Strategist, my primary goal is to establish a robust and logical framework for this review paper. The proposed structure is designed to be comprehensive and to facilitate a deep, comparative analysis rather than a simple serial description of the three prototypes. I've initiated the structure with a broad theoretical foundation in Section 2, which establishes the core scientific principles (biomimicry, structure-property relationships) that will serve as the analytical lens for the entire paper. The core of the paper, Section 3, is structured as parallel case studies. This parallelism is critical; it ensures that each prototype is analyzed using a consistent set of criteria (Biological Context, Structure, Mechanism, Application), which will be essential for the subsequent comparative synthesis in Section 4. Section 4 is the intellectual core of a high-level review, moving beyond description to synthesis, comparison, and the identification of unifying principles. This elevates the paper from a summary to a scholarly contribution. The conclusion is designed to explicitly answer the research questions posed in the introduction, ensuring a cohesive and complete argument. I am proposing this high-level structure for discussion and refinement.",
+  "outline_section": "# Academic Review Outline Proposal\n\n**Title:** Biomimetic Prototypes: A Comparative Review of Structural and Mechanical Performance in Mantis Shrimp, Owl Feathers, and Polar Bear Fur\n\n**Estimated Word Count:** 8,000 - 12,000 words\n\n**1.0 Abstract**\n   - **1.1** Background: Introduction to biomimicry as a source for high-performance materials.\n   - **1.2** Scope: Focus on three distinct prototypes (Mantis Shrimp, Owl Feather, Polar Bear Fur) and their respective mechanical advantages (impact resistance, noise reduction, thermal insulation).\n   - **1.3** Methodology: A comprehensive literature review and synthesis of structural-functional relationships.\n   - **1.4** Key Synthesis: High-level summary of the unifying principles (e.g., hierarchical structures, material gradients) and their implications for engineering design.\n   - **1.5** Keywords: Biomimicry, Structure-Property Relationship, Mantis Shrimp, Owl Feather, Polar Bear Fur, Impact Resistance, Aeroacoustics, Thermal Insulation.\n\n**2.0 Introduction**\n   - **2.1** The Imperative for Advanced Materials in Modern Engineering.\n   - **2.2** Nature as a Source of Inspiration: The Field of Biomimicry.\n   - **2.3** Research Gap: Lack of a comparative synthesis across different physical domains (mechanical, acoustic, thermal) using these specific, high-performing biological exemplars.\n   - **2.4** Research Questions and Objectives:\n       - Primary Question: What are the fundamental structural design principles that govern the unique mechanical performance of these three prototypes?\n       - Secondary Question: How do these principles converge or diverge across different biological systems and physical challenges?\n       - Objective: To synthesize the current state of knowledge and propose a unified framework for understanding and translating these biological mechanisms into engineering applications.\n   - **2.5** Structure of the Review.\n\n**3.0 Theoretical Framework: Principles of Structure-Function in Biological Materials**\n   - **3.1** The Concept of Hierarchical Structures: From Nano to Macro Scale.\n   - **3.2** Key Mechanical Concepts for Analysis:\n       - **3.2.1** Solid Mechanics: Toughness, Fracture Mechanics, and Energy Absorption.\n       - **3.2.2** Fluid Dynamics and Acoustics: Turbulence, Boundary Layers, and Noise Generation/Suppression.\n       - **3.2.3** Thermodynamics and Heat Transfer: Conduction, Convection, Radiation, and Insulation.\n\n**4.0 Analysis of Biological Prototypes: Case Studies**\n   - **4.1 Case Study 1: The Mantis Shrimp Dactyl Club – A Paradigm of Impact Toughness**\n       - **4.1.1** Biological Context and Performance Requirements.\n       - **4.1.2** Multi-Scale Structural Analysis (Impact, Periodic, Bouligand Regions).\n       - **4.1.3** Governing Mechanical Mechanisms (Crack Torsion, Energy Dissipation).\n       - **4.1.4** State-of-the-Art Biomimetic Applications and Future Prospects.\n   - **4.2 Case Study 2: The Owl Feather – A Masterclass in Silent Flight**\n       - **4.2.1** Biological Context and Predatory Advantage.\n       - **4.2.2** Analysis of Key Feather Morphologies (Leading-Edge Serrations, Trailing-Edge Fringe, Velvety Pile).\n       - **4.2.3** Governing Aeroacoustic Mechanisms (Turbulence Manipulation, Noise Suppression).\n       - **4.2.4** State-of-the-Art Biomimetic Applications and Future Prospects.\n   - **4.3 Case Study 3: The Polar Bear Fur – A Model for Thermal Insulation**\n       - **4.3.1** Biological Context and Environmental Adaptation.\n       - **4.3.2** Analysis of the Core-Sheath Hair Structure and Fur Layering.\n       - **4.
+parseJsonFromMarkdown @ utils.ts:27
+generateAcademicOutline @ academicOutline.ts:220
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+academicOutline.ts:223 [Academic Outline] Agent Alpha (Turn 1, Attempt 1/2) returned invalid JSON or empty thought.
+generateAcademicOutline @ academicOutline.ts:223
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+academicOutline.ts:224 [Academic Outline] Parse details: {hasParsedResult: false, hasThought: false, thoughtLength: 0, action: undefined, rawTextLength: 4991, …}
+generateAcademicOutline @ academicOutline.ts:224
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+academicOutline.ts:236 [Academic Outline] JSON parse failed, waiting 1500ms before retry attempt 2...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'VDSVaOrRB7PV1MkPkZTGwQs', text: '{\n  "action": "continue_debate",\n  "thought": "As …hree case studies in dedicated sect...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'fjSVaO7BM-fC1MkPtcnMoQs', text: '{\n  "action": "continue_debate",\n  "thought": "Alp…omparative analysis—into granular c...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'lDSVaJzwOs3Q1MkP26bxkQc', text: `{\n  "action": "continue_debate",\n  "thought": "Age…rst, we should introduce a 'Unifyin...[TRUNCATED]`}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 2312ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...iWEs. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 4415ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 3/6] Operation: 'generateContent' with key ...HmE0. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 2968ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 4/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 4/6] Operation: 'generateContent' with key ...GrtY. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 4877ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 5/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent 429 (Too Many Requests)
+executeWithRetry @ geminiClient.ts:132
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:194 [API Call Failed: Attempt 5/6] Operation: 'generateContent' with key ...iWEs. Error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:66 [API Interval] Recorded 429 error. Total recent errors: 1
+geminiClient.ts:226 [API Retry] Rate limit hit. Respecting 'retryDelay' of 53s. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 6/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 6/6] Operation: 'generateContent' with key ...HmE0. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 4704ms. Waiting...
+geminiClient.ts:242 [API Error: All Keys Failed] Operation: 'generateContent'. Last error: Empty response from API
+executeWithRetry @ geminiClient.ts:242
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:243 [API Error] Failed Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…)\n5. Conclusion (800-1200 words)\n6....[TRUNCATED]', config: {…}}
+executeWithRetry @ geminiClient.ts:243
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36

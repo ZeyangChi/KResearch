@@ -64,7 +64,7 @@ ${roleContext}
 *   Previously Executed Searches: <searches>${searchHistoryText || 'None yet.'}</searches>
 *   Synthesized Learnings from Past Searches: <learnings>${readHistoryText || 'No learnings yet.'}</learnings>
 
-${academicOutline ? `**CRITICAL: Academic Outline Constraint**
+${academicOutline ? `**CRITICAL: Academic Outline Constraint & Search Quality Standards**
 You MUST ensure all research activities serve the following academic outline. Every search query must target specific sections of this outline:
 
 <ACADEMIC_OUTLINE>
@@ -77,6 +77,15 @@ ${academicOutline}
 3. Ensure comprehensive coverage of all outline sections before concluding research
 4. Focus on academic-quality sources: scholarly articles, research papers, authoritative reports
 5. Aim for 8000+ words of final content by gathering substantial material for each section
+
+**Academic Search Quality Standards:**
+1. **Source Authority Priority:** Target .edu, .gov, .org domains, peer-reviewed journals, research institutions
+2. **Research Methodology Focus:** Seek studies with clear methodology, data analysis, and evidence-based conclusions
+3. **Citation-Worthy Sources:** Prioritize sources that would be acceptable in academic papers and research reports
+4. **Temporal Relevance:** Balance recent research (last 5 years) with foundational studies and seminal works
+5. **Diverse Perspectives:** Include multiple viewpoints and cross-reference findings across different sources
+6. **Quantitative Evidence:** Seek studies with statistical data, empirical evidence, and measurable outcomes
+7. **Expert Authority:** Target content from recognized experts, researchers, and thought leaders in the field
 ` : ''}
 
 **Current Planning Conversation:**
@@ -134,16 +143,49 @@ ${conversationText || "You are Agent Alpha, starting the conversation. Propose t
     *   Is there a grace period for companies to achieve compliance?
     *   What are the specific steps outlined in the bill for the rulemaking process by the enforcement agency?
 
-3.  **Debate Dynamics & Action:**
-    *   **Agent Alpha (Strategist):** Your goal is to set the high-level direction. Your action should typically be 'continue_debate' to allow the Tactician to refine your strategy into concrete actions.
-    *   **Agent Beta (Tactician):** Your goal is to turn strategy into action. If you agree with the strategy, your action should be 'search', and you must provide precise, effective queries in the 'queries' field. If you see a flaw, your action can be 'continue_debate' to propose a refinement.
-    *   The 'finish' action is enabled only after ${minCycles} cycles. Use it when you are confident that further research will yield diminishing returns and you have sufficient information for a comprehensive report.
+3.  **Enhanced Debate Dynamics & Action:**
+    *   **Agent Alpha (Academic Strategist):**
+        - Set high-level research direction with academic rigor in mind
+        - Identify knowledge gaps that require scholarly investigation
+        - Prioritize research areas based on academic importance and outline requirements
+        - Consider the quality and authority of potential sources
+        - Propose research strategies that will yield high-quality, citable evidence
+        - Your action should typically be 'continue_debate' to allow the Tactician to refine your strategy into concrete academic searches
+    *   **Agent Beta (Research Tactician):**
+        - Transform strategic direction into precise, academic-quality search queries
+        - Apply search optimization techniques to maximize source quality
+        - Ensure queries target authoritative, peer-reviewed, and scholarly sources
+        - Balance breadth and depth to achieve comprehensive coverage
+        - If you agree with the strategy, your action should be 'search' with optimized academic queries
+        - If you identify strategic flaws or better approaches, use 'continue_debate' to propose refinements
+    *   **Quality Assessment:** Both agents should consider:
+        - Source authority (.edu, .gov, peer-reviewed journals)
+        - Research methodology and evidence quality
+        - Recency and relevance of findings
+        - Comprehensive coverage of the academic outline
+    *   The 'finish' action is enabled only after ${minCycles} cycles. Use it when you are confident that further research will yield diminishing returns and you have sufficient high-quality information for a comprehensive academic report.
 
-4.  **Query Formulation (for 'search' action):**
+4.  **Enhanced Query Formulation (for 'search' action):**
+    *   **Academic Quality Requirements:** Prioritize scholarly sources, research papers, peer-reviewed articles, and authoritative reports. Use academic terminology and research-oriented language.
+    *   **Query Optimization Strategies:**
+        - Include academic keywords: "research", "study", "analysis", "investigation", "methodology", "findings", "evidence"
+        - Add time constraints for recent research: "recent study", "2020-2024", "latest research"
+        - Specify source types: "peer-reviewed", "journal article", "academic paper", "research report"
+        - Use domain-specific terminology relevant to the field of study
+    *   **Query Structure Guidelines:**
+        - Primary query: Direct academic search with research keywords
+        - Secondary query: Methodology or approach-focused search
+        - Validation query: Cross-referencing or alternative perspectives
+        - Specific query: Detailed technical or statistical information
+    *   **Quality Indicators to Target:**
+        - .edu, .gov, .org domains for authoritative sources
+        - Known academic publishers and journals
+        - Research institutions and think tanks
+        - Government reports and official statistics
     *   Queries must be specific, targeted, and designed to fill the knowledge gaps identified in your 'thought' process.
-    *   Queries must align with your Role Directive.
+    *   Queries must align with your Role Directive and academic outline constraints.
     *   Avoid redundancy. Do not create queries that are semantically identical to those in <searches>.
-    *   If your goal is to validate information, formulate queries that seek cross-referencing or alternative perspectives. E.g., "[Claim from source A] opposing views" or "[Company X product] independent reviews".
+    *   Each query should target a specific section of the academic outline when applicable.
 
 5.  **Research Cycle Rules:**
     *   You should aim to conclude the research between ${minCycles} and ${maxCycles} cycles. Do not extend research unnecessarily.

@@ -1,0 +1,552 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+generateContent @ geminiClient.ts:245
+executeSingleSearch @ search.ts:150
+(anonymous) @ useAppLogic.ts:291
+(anonymous) @ useAppLogic.ts:291
+handleStart @ App.tsx:97
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<button>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+LiquidButton @ LiquidButton.tsx:10
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<LiquidButton>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:199
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:189 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+executeSingleSearch @ search.ts:150
+(anonymous) @ useAppLogic.ts:291
+(anonymous) @ useAppLogic.ts:291
+handleStart @ App.tsx:97
+executeDispatch @ react-dom_client.js?v=f966d72e:11736
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+processDispatchQueue @ react-dom_client.js?v=f966d72e:11772
+(anonymous) @ react-dom_client.js?v=f966d72e:12182
+batchedUpdates$1 @ react-dom_client.js?v=f966d72e:2628
+dispatchEventForPluginEventSystem @ react-dom_client.js?v=f966d72e:11877
+dispatchEvent @ react-dom_client.js?v=f966d72e:14792
+dispatchDiscreteEvent @ react-dom_client.js?v=f966d72e:14773
+<button>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+LiquidButton @ LiquidButton.tsx:10
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<LiquidButton>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+AppContent @ App.tsx:199
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:226 [API Retry] Network error (N/A). Applying exponential backoff of 2351ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'f_CUaPmwCKWgz7IPu7SMqAI', text: '好的，非常荣幸能以力学与仿生结构设计专家的身份，为您的“结构基因”研究体系提供案例分析。您提出的五维…型的层合复合结构，确保了应力能够在硬质相和软质相之间有效传递。\n   ...[TRUNCATED]'}
+useAppLogic.ts:320 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+useAppLogic.ts:325 Forcing API key rotation before clarification phase...
+useAppLogic.ts:326 [DEBUG] Keys before rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 1
+useAppLogic.ts:328 [DEBUG] Keys after rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 2, Key to be used: AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'hfCUaKCzOrrjz7IP0PqgiQE', text: `The user's request for case studies on biological …d "structural gene" framework has been completed.`}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…"structural gene" framework has been completed."\n', config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'ivCUaJLdIoHjz7IP69nD4QM', text: `{"content": "The user's request for case studies o…ramework has been completed.", "type": "summary"}`}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:189 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...GrtY. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+generateAcademicOutline @ academicOutline.ts:185
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:226 [API Retry] Empty response (N/A). Applying exponential backoff of 2258ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'uvCUaKyLDJjVz7IPvfqZiAI', text: '{\n  "action": "continue_debate",\n  "thought": "As …w different biological systems (Nac...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'z_CUaLeAC8Otz7IP3uXXqAI', text: `{\n  "action": "continue_debate",\n  "thought": "Alp…ene', propose a taxonomy for classi...[TRUNCATED]`}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '7PCUaIDCDuHgz7IPrv2wEQ', text: '{\n  "action": "continue_debate",\n  "thought": "I c…systematic application to the case ...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…ings and bullet points for content requirements.\n', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:189 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:226 [API Retry] Empty response (N/A). Applying exponential backoff of 2278ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…ings and bullet points for content requirements.\n', config: {…}}
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent 500 (Internal Server Error)
+executeWithRetry @ geminiClient.ts:132
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:189 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...iWEs. Error: An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<AppContent>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+App @ App.tsx:46
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17424
+renderWithHooksAgain @ react-dom_client.js?v=f966d72e:4281
+renderWithHooks @ react-dom_client.js?v=f966d72e:4217
+updateFunctionComponent @ react-dom_client.js?v=f966d72e:6619
+beginWork @ react-dom_client.js?v=f966d72e:7654
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+performUnitOfWork @ react-dom_client.js?v=f966d72e:10874
+workLoopSync @ react-dom_client.js?v=f966d72e:10728
+renderRootSync @ react-dom_client.js?v=f966d72e:10711
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10330
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=f966d72e:11623
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=f966d72e:250
+(anonymous) @ index.tsx:13
+geminiClient.ts:226 [API Retry] Server error (500). Applying exponential backoff of 8675ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…ings and bullet points for content requirements.\n', config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'yfGUaIKCKe6mqtsP2_-o-AI', text: 'Of course. Based on the strategic discussion betwe…or similar high-impact journal.\n\n**...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+research.ts:148 Starting/Continuing DYNAMIC CONVERSATIONAL research for: 你是一位精通力学与仿生结构设计的专家。我正在构建一个类比于“人类基因组计划”和“材料基因组计划”的“结构基因”研究体系。我们将“结构基因”定义为标准化、可参数化的结构特征单元，这些单元能够直接影响结构的宏观物理性能，尤其是力学性能。
+本研究提出了一个包含五个正交维度的结构基因分类框架，分别为：
+拓扑基因（Topology Genes）
+几何基因（Geometric Genes）
+构型基因（Architectural Genes）
+组分基因（Constituent Genes）
+工艺基因（Processing Genes）
+这五类结构基因从不同层面描述决定结构性能的关键信息，共同构建出系统化的“结构基因图谱”。
+目前，我已完成论文前两章的大部分撰写工作（见manuscript），下一步将进入第三部分，即案例分析：
+请你围绕三个具有代表性的生物原型进行结构设计案例分析，目标如下：
+分析其结构设计中涉及的关键结构基因；
+明确哪些基因主导了特定力学性能（如刚度、强度、韧性、多功能性等）；
+阐明各类基因的相对作用强度（主要/次要）；
+如有可能，解释其多基因协同机制。
+请优先参考卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '-vGUaNWVLNysmtkP4pWAgAw', text: '{\n  "action": "continue_debate",\n  "thought": "1. …ysis:** The current state of our kn...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:189 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...HmE0. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+runDynamicConversationalPlanner @ planner.ts:114
+await in runDynamicConversationalPlanner
+runIterativeDeepResearch @ research.ts:207
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:142
+(anonymous) @ useAppLogic.ts:259
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:226 [API Retry] Empty response (N/A). Applying exponential backoff of 2383ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:189 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...GrtY. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:189
+await in executeWithRetry
+generateContent @ geminiClient.ts:245
+runDynamicConversationalPlanner @ planner.ts:114
+await in runDynamicConversationalPlanner
+runIterativeDeepResearch @ research.ts:207
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:142
+(anonymous) @ useAppLogic.ts:259
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:226 [API Retry] Empty response (N/A). Applying exponential backoff of 4065ms. Waiting...
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:168 [API Success] Operation: generateContent
+geminiClient.ts:169 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'IfKUaLC3ItegqtsP6ZmugAw', text: '{\n  "action": "search",\n  "thought": "1. **Role Ad…I will proceed with executing this ...[TRUNCATED]'}
+utils.ts:11 Failed to parse JSON response: SyntaxError: Unterminated string in JSON at position 515 (line 3 column 492)
+    at JSON.parse (<anonymous>)
+    at parseJsonFromMarkdown (utils.ts:9:21)
+    at runDynamicConversationalPlanner (planner.ts:124:32)
+    at async runIterativeDeepResearch (research.ts:207:18)
+    at async useAppLogic.ts:142:28 Raw text: {
+  "action": "search",
+  "thought": "1. **Role Adherence:** My role is Agent Beta, the Tactician. I have received the strategy from Agent Alpha. My task is to translate this high-level strategy into specific, effective search queries that adhere to academic standards. I must now formulate these queries. Alpha's strategy to focus on building the theoretical framework (Section 3 of the outline) is sound, as it addresses the largest gap in our current knowledge. I will proceed with executing this strategy. \n\n2
+parseJsonFromMarkdown @ utils.ts:11
+runDynamicConversationalPlanner @ planner.ts:124
+await in runDynamicConversationalPlanner
+runIterativeDeepResearch @ research.ts:207
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:142
+(anonymous) @ useAppLogic.ts:259
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+citationManager.ts:187 [Citation Manager] All citations cleared
+synthesis.ts:142 [Synthesis] Initialized citation manager with 0 citations
+synthesis.ts:158 Generating chapter: Of course. Based on the strategic discussion between agents Alpha and Beta, here is a comprehensive academic outline for the proposed research paper, formatted as requested....
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nYou are a world-class academic writer. Your task …tionally diverse systems (e.g., a s...[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms

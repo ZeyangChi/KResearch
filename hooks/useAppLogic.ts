@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { synthesizeReport, rewriteReport, clarifyQuery, runIterativeDeepResearch, generateVisualReport, regenerateVisualReportWithFeedback, generateAcademicOutline } from '../services';
-import { ResearchUpdate, FinalResearchData, ResearchMode, FileData, AppState, ClarificationTurn, Citation, HistoryItem, TranslationStyle, ReportVersion, Role } from '../types';
+import { ResearchUpdate, FinalResearchData, ResearchMode, FileData, AppState, ClarificationTurn, Citation, HistoryItem, TranslationStyle, ReportVersion, Role, DebateUpdate } from '../types';
 import { AllKeysFailedError, apiKeyService, historyService, roleService } from '../services';
 import { useNotification } from '../contextx/NotificationContext';
 import { useLanguage } from '../contextx/LanguageContext';
@@ -76,6 +76,7 @@ export const useAppLogic = () => {
     // Academic outline state
     const [academicOutline, setAcademicOutline] = useState<string | null>(null);
     const [isGeneratingOutline, setIsGeneratingOutline] = useState<boolean>(false);
+    const [debateUpdates, setDebateUpdates] = useState<DebateUpdate[]>([]);
 
     // Role state
     const [roles, setRoles] = useState<Role[]>(() => roleService.getRoles());
@@ -93,6 +94,7 @@ export const useAppLogic = () => {
             const title = currentReport ? extractTitleFromReport(currentReport.content) : query;
             historyService.updateHistoryItem(currentHistoryId, { finalData, title: title || query });
             setHistory(historyService.getHistory());
+
         }
     }, [finalData, currentHistoryId, appState, query]);
 
@@ -195,12 +197,18 @@ export const useAppLogic = () => {
     useEffect(() => {
         if (appState === 'outlining' && clarifiedContext && !isGeneratingOutline) {
             setIsGeneratingOutline(true);
+            setDebateUpdates([]); // 重置辩论更新
             const selectedRole = roles.find(r => r.id === selectedRoleId) || null;
 
-            generateAcademicOutline(clarifiedContext, mode, selectedFile, selectedRole, abortControllerRef.current?.signal)
+            // 创建辩论更新回调函数
+            const onDebateUpdate = (update: DebateUpdate) => {
+                setDebateUpdates(prev => [...prev, update]);
+            };
+
+            generateAcademicOutline(clarifiedContext, mode, selectedFile, selectedRole, abortControllerRef.current?.signal, onDebateUpdate)
                 .then((outline) => {
                     setAcademicOutline(outline);
-                    setAppState('researching');
+                    setAppState('awaiting_approval');
                 })
                 .catch((error) => {
                     if (error instanceof AllKeysFailedError) {
@@ -319,23 +327,6 @@ export const useAppLogic = () => {
         handleClarificationResponse(newHistory, initialSearchResult);
     }, [clarificationHistory, handleClarificationResponse, initialSearchResult]);
     
-    const handleSkipClarification = useCallback(() => {
-        if (appState !== 'clarifying') return;
-
-        const userHasProvidedAnswers = clarificationHistory.filter(t => t.role === 'user').length > 1;
-
-        let contextForResearch: string;
-
-        if (userHasProvidedAnswers) {
-            contextForResearch = `The user's initial query was "${query}". The following conversation was held to clarify the topic. The research should proceed based on this context:\n${clarificationHistory.map(t => `${t.role}: ${t.content}`).join('\n')}`;
-        } else {
-            contextForResearch = query;
-        }
-        
-        setClarifiedContext(contextForResearch);
-        setAppState('researching');
-
-    }, [appState, clarificationHistory, query]);
 
     const handleContinueResearch = () => {
         if (appState !== 'paused') return;
@@ -504,6 +495,17 @@ export const useAppLogic = () => {
         }
     }, [finalData, isRegenerating, isRewriting, mode, addNotification, t, roles, selectedRoleId]);
 
+    const handleAcknowledgeClarification = () => {
+        addNotification({
+            type: 'info',
+            title: t('clarificationSkippedTitle'),
+            message: t('clarificationSkippedMessage'),
+            duration: 8000
+        });
+        setClarifiedContext(query);
+        setAppState('outlining');
+    };
+
     const handleCloseVisualizer = () => setIsVisualizerOpen(false);
     
     const handleStopResearch = () => {
@@ -588,6 +590,12 @@ export const useAppLogic = () => {
         setTranslationLoading(false);
         setSelectedRoleId(null);
     }
+
+    const handleApproveOutline = () => {
+        if (appState === 'awaiting_approval') {
+            setAppState('researching');
+        }
+    };
     
     const loadFromHistory = (id: string) => {
         const item = historyService.getHistoryItem(id);
@@ -698,7 +706,7 @@ export const useAppLogic = () => {
         query, setQuery, guidedQuery, setGuidedQuery, selectedFile, researchUpdates, finalData, mode, setMode, appState,
         clarificationHistory, clarificationLoading, fileInputRef, startClarificationProcess,
         handleAnswerSubmit, handleStopResearch, handleFileChange, handleRemoveFile, handleReset,
-        isVisualizing, visualizedReportHtml, isVisualizerOpen, handleVisualizeReport, handleCloseVisualizer, handleSkipClarification,
+        isVisualizing, visualizedReportHtml, isVisualizerOpen, handleVisualizeReport, handleCloseVisualizer,
         isRegenerating, isRewriting, handleRegenerateReport, handleReportRewrite,
         isSettingsOpen, setIsSettingsOpen,
         handleVisualizerFeedback,
@@ -709,6 +717,8 @@ export const useAppLogic = () => {
         handleTranslateReport, translationLoading,
         roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen,
         // Academic outline related
-        academicOutline, isGeneratingOutline
+        academicOutline, isGeneratingOutline, debateUpdates,
+        handleApproveOutline,
+        handleAcknowledgeClarification,
     };
 };

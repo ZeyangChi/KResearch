@@ -1,0 +1,956 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+citationManager.ts:12 [Citation Manager] Initialized
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ND-VaJ3sLKKr1MkPhvf6iAk', text: '### “结构基因”解码自然界精妙设计：三大生物原型案例分析\n\n尊敬的专家，您好。\n\n为支持您的“结…白外壳和柔韧的骨骼内芯组成，这种刚柔并济的复合材料有助于在保持强度的同...[TRUNCATED]'}
+useAppLogic.ts:294 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+useAppLogic.ts:299 Forcing API key rotation before clarification phase...
+useAppLogic.ts:300 [DEBUG] Keys before rotation: ["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 0
+useAppLogic.ts:302 [DEBUG] Keys after rotation: ["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 1, Key to be used: AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'Qz-VaMatPLai1MkPtMrzoQk', text: 'Regarding the forward design of novel biomimetic s…gies for fabricating and validating such designs?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…es for fabricating and validating such designs?"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'SD-VaPuWKbPU1MkPl4G_qAk', text: '{"content": "Regarding the forward design of novel…nd validating such designs?", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(3), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'yT-VaOi5NbPU1MkPl4G_qAk', text: '您是希望将研究重点放在冲击吸能、减振和降噪这三类力学/声学性能的生物结构原型上，还是也包括隔热性能的生物结构原型？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…在冲击吸能、减振和降噪这三类力学/声学性能的生物结构原型上，还是也包括隔热性能的生物结构原型？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'zj-VaPirKMGd1MkPg4aZsAk', text: '{"content": "您是希望将研究重点放在冲击吸能、减振和降噪这三类力学/声学性能的生物结构原型上，还是也包括隔热性能的生物结构原型？", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(5), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'A0CVaMPKDf7SjMcP4aGa4AM', text: '您是希望我们继续寻找新的、主要以减振或降噪为突出特点的生物结构原型进行案例分析，还是希望在已有的案例…构基因及其协同机理？此外，您是否对同时具备冲击吸能、减振和降噪等多功能性的生物结构原型特别感兴趣？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…因及其协同机理？此外，您是否对同时具备冲击吸能、减振和降噪等多功能性的生物结构原型特别感兴趣？"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'CECVaJStGayUjMcP7cjwoQ4', text: '{"content": "您是希望我们继续寻找新的、主要以减振或降噪为突出特点的生物结构原型进行案例…击吸能、减振和降噪等多功能性的生物结构原型特别感兴趣？", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(7), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'ZkCVaOj-LLONjMcPkbHg6AM', text: '您是否希望将重点放在雀尾螳螂虾的掠肢（dactyl club）上，它同时展现出卓越的冲击吸收能力和独特的声子（减振/降噪）特性，作为多功能结构基因的案例分析？'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…，它同时展现出卓越的冲击吸收能力和独特的声子（减振/降噪）特性，作为多功能结构基因的案例分析？"\n', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'yUCVaOXRJvyNjMcPnfHjiQQ', text: '{"content": "您是否希望将重点放在雀尾螳螂虾的掠肢（dactyl club）上，它同时展…声子（减振/降噪）特性，作为多功能结构基因的案例分析？", "type": "question"}'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(9), config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'IEGVaNa7C9241MkP5YCQqQk', text: '好的，我们将为您在论文第三章中，围绕“结构基因”框架，深入分析以下三个具有代表性的多功能生物结构原型…轻质、高比强度、能量吸收和阻尼特性，重点关注其不规则但有序的开孔拓扑、梯度几何以及多组分协同机制。'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…、高比强度、能量吸收和阻尼特性，重点关注其不规则但有序的开孔拓扑、梯度几何以及多组分协同机制。"\n', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'JUGVaN7IGa2v1MkPyIH3sAk', text: '{"content":"好的，我们将为您在论文第三章中，围绕“结构基因”框架，深入分析以下三个具有代…点关注其不规则但有序的开孔拓扑、梯度几何以及多组分协同机制。","type":"summary"}'}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'RkGVaMDPNZKA1MkPus3lsAc', text: '{\n  "action": "continue_debate",\n  "thought": "As …-function paradigm, the Materials G...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'mkGVaKDtDYXU1MkPvaKqqQc', text: '{\n  "action": "continue_debate",\n  "thought": "Age…Chapter 3, where we must systematic...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'uEGVaNP9CYC51MkPsZWdgQk', text: '{\n  "action": "continue_debate",\n  "thought": "Age…lens for the entire paper. My prima...[TRUNCATED]'}
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…in Chapter 3 must be followed by a ...[TRUNCATED]', config: {…}}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...KYqQ. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+generateAcademicOutline @ academicOutline.ts:308
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:208
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+geminiClient.ts:232 [API Retry] Network error (N/A). Applying exponential backoff of 3319ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nBased on the collaborative discussion between Alp…in Chapter 3 must be followed by a ...[TRUNCATED]', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'ZkKVaMvCNrjU1MkP3ri7iQc', text: 'Of course. Based on the strategic framework and de…. Abstract (300-500 words)**\n\n*   *...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+research.ts:58 Starting/Continuing DYNAMIC CONVERSATIONAL research for: 你是一位精通力学与仿生结构设计的专家。我正在构建一个类比于“人类基因组计划”和“材料基因组计划”的“结构基因”研究体系。我们将“结构基因”定义为标准化、可参数化的结构特征单元，这些单元能够直接影响结构的宏观物理性能，尤其是力学性能。
+本研究提出了一个包含五个正交维度的结构基因分类框架，分别为：
+拓扑基因（Topology Genes）
+几何基因（Geometric Genes）
+构型基因（Architectural Genes）
+组分基因（Constituent Genes）
+工艺基因（Processing Genes）
+这五类结构基因从不同层面描述决定结构性能的关键信息，共同构建出系统化的“结构基因图谱”。
+目前，我已完成论文前两章的大部分撰写工作（见manuscript），下一步将进入第三部分，即案例分析：
+请你围绕三个具有代表性的生物原型进行结构设计案例分析，目标如下：
+分析其结构设计中涉及的关键结构基因；
+明确哪些基因主导了特定力学性能（如刚度、强度、韧性、多功能性等）；
+阐明各类基因的相对作用强度（主要/次要）；
+如有可能，解释其多基因协同机制。
+请优先参考卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'BUSVaLuHEs-i1MkPo5O-qAc', text: '{\n  "action": "continue_debate",\n  "thought": "1. …uscript` has already detailed the t...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=0, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'HUSVaM6DC7PU1MkPkYG_qAk', text: '{\n  "action": "search",\n  "thought": "I concur wit…evel strategy into precise, actiona...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…alth, and lightweight strength are ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…t resistance, acoustic stealth, and...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi… stealth, and lightweight strength ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…t resistance, acoustic stealth, and...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'eESVaPPCBNyn1MkP-I_cgQk', text: '### Unveiling the Masterful Design of Trabecular B…particularly from impact loading du...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'e0SVaOrrLf211MkPg8it6Ag', text: '### **Academic Analysis of Owl Feather Aeroacousti…at its source. While conventional a...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'fESVaLHECa2v1MkPyIH3sAk', text: '## The Silent Architect: Deconstructing the Owl Wi…rch provides a rich foundation for ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'f0SVaJrzKbai1MkPtMrzoQk', text: '## The Architectural Genius of Trabecular Bone: A …loads from the joints to the dense ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'n0SVaOznC4mq1MkPx6_HwQo', text: '{\n  "action": "continue_debate",\n  "thought": "1. …provided `manuscript`, and the `<le...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'vESVaJWSIeGl1MkPlO3JyQg', text: '{\n  "action": "search",\n  "thought": "1. **Role Ad…**Deconstruction & Analysis:** I ha...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ulti-scale *structure* made from th...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…e of a complex, multi-scale *struct...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…* made from that material.\n    *   ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…composition and predicting the perf...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '4kSVaLvsCbzU1MkPvY6fkQc', text: '### **State-of-the-Art in Architected and Hierarch… length scales, unlock unprecedente...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '5ESVaMNhhZbUyQ-gyPyYCQ', text: '### **The Dactyl Club as a Natural Phononic Crysta…creates a significant challenge: ho...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '-USVaMrHBuGA1MkPoJjlwAg', text: '## Paradigms in Bio-Inspired Design: A Critical An…ificant attempts to systematize the...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'CkWVaLXZL-201MkPvc7v2As', text: '{"answer":"### **Academic Analysis for Section 4.1…rabs and mollusks. The club can ach...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'LEWVaPmlM4GI1MkPsOLUkQc', text: '{\n  "action": "continue_debate",\n  "thought": "1. …** Our current state of knowledge i...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...KYqQ. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+runDynamicConversationalPlanner @ planner.ts:114
+await in runDynamicConversationalPlanner
+runIterativeDeepResearch @ research.ts:117
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:116
+(anonymous) @ useAppLogic.ts:233
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 3768ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'WUWVaOaDOqei1MkPjv-D0Ag', text: '{\n  "action": "search",\n  "thought": "1. **Role Ad…cur with Alpha\'s assessment. Our `<...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ucture* made from that material.\n  ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…e* made from that material.\n    *  ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…e from that material.\n    *   Argue...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…from that material.\n    *   Argue t...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'jUWVaMXiKfec1MkPxO-JyQk', text: "## Unifying Principles of Natural Design: A Deep D…'s elegant solutions to complex eng...[TRUNCATED]"}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'jkWVaIbDH7GA1MkPwaLR-Ag', text: 'A comparative analysis of the mechanical performan…tifunctionality.\n\n### Detailed Acad...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'jkWVaMnYLJSz1MkP383jwAc', text: '### **Academic Review for Cross-Case Synthesis: Un…ed across a vast range of organisms...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'kkWVaIrlFOfC1MkPiKOlkQc', text: '### **Section 5.3: Implications for Engineering an…ntal "genes," engineers can unlock ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'skWVaMnAFeSu1MkPz4u4oAc', text: '{\n  "action": "continue_debate",\n  "thought": "1. … our knowledge, reflected in the `<...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'y0WVaMvBAYC51MkPsZWdgQk', text: '{\n  "action": "search",\n  "thought": "I am operati…rrent knowledge base on the mantis ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…understanding material composition ...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi… predicting the performance of a co...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ormance of a complex, multi-scale *...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…position and predicting the perform...[TRUNCATED]', config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...KYqQ. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+executeSingleSearch @ search.ts:104
+(anonymous) @ research.ts:25
+performSearchAndRead @ research.ts:24
+runIterativeDeepResearch @ research.ts:144
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:116
+(anonymous) @ useAppLogic.ts:233
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 3717ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…position and predicting the perform...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...GrtY. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+executeSingleSearch @ search.ts:104
+(anonymous) @ research.ts:25
+performSearchAndRead @ research.ts:24
+runIterativeDeepResearch @ research.ts:144
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:116
+(anonymous) @ useAppLogic.ts:233
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 3458ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…ormance of a complex, multi-scale *...[TRUNCATED]', config: {…}}
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '8EWVaIvhEsCd1MkPmbKqkAc', text: '### Decoding the Compositional Genius of the Manti…sitional gene" is a key element of ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'B0aVaKzrGYCr1MkPxLeAyQk', text: '### **Academic Analysis for Section 4.1.2: Decodin…ological structure. This process is...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'CkaVaPEtzdDUyQ_bpvGRBw', text: '### **Decoding the Structural Genome of the Stomat… finely tuned to achieve extreme fu...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'IUaVaLqbFuuS1MkPwveW0Qk', text: '### **Section 4.1.2. Decoding the Structural Genom…icated, multi-region assembly whose...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'PUaVaJbqKevN1MkPu7rOuAk', text: '{\n  "action": "continue_debate",\n  "thought": "The…tructed according to the five-gene ...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+planner.ts:112 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+planner.ts:113 [DEBUG] Planner about to call generateContent. API Key Service State: Index=-1, Keys=["AIzaSyBA85FxFeZIhY5uDjXTmJdQmS3502YKYqQ","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"]
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+geminiClient.ts:194 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...KYqQ. Error: Empty response from API
+executeWithRetry @ geminiClient.ts:194
+await in executeWithRetry
+generateContent @ geminiClient.ts:251
+runDynamicConversationalPlanner @ planner.ts:114
+await in runDynamicConversationalPlanner
+runIterativeDeepResearch @ research.ts:117
+await in runIterativeDeepResearch
+(anonymous) @ useAppLogic.ts:116
+(anonymous) @ useAppLogic.ts:233
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+flushPendingEffects @ react-dom_client.js?v=f966d72e:11276
+flushSpawnedWork @ react-dom_client.js?v=f966d72e:11250
+commitRoot @ react-dom_client.js?v=f966d72e:11081
+commitRootWhenReady @ react-dom_client.js?v=f966d72e:10512
+performWorkOnRoot @ react-dom_client.js?v=f966d72e:10457
+performSyncWorkOnRoot @ react-dom_client.js?v=f966d72e:11635
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=f966d72e:11536
+processRootScheduleInMicrotask @ react-dom_client.js?v=f966d72e:11558
+(anonymous) @ react-dom_client.js?v=f966d72e:11649
+geminiClient.ts:232 [API Retry] Empty response (N/A). Applying exponential backoff of 3708ms. Waiting...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'bkaVaJy_Ep2q1MkP-8_V-Qg', text: '{\n  "action": "search",\n  "thought": "My role as A…ructural genes. My strategy is to e...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…rformance of a complex, multi-scale...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…redicting the performance of a comp...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…edicting the performance of a compl...[TRUNCATED]', config: {…}}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...KYqQ
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: '\nPlease conduct a deep academic search and analysi…composition and predicting the perf...[TRUNCATED]', config: {…}}
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 20000ms
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'kEaVaL6FMo-l1MkPy8mWgQk', text: '### **Decoding the Structural Genome: A Comparativ…l performance of traditional, perio...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'mUaVaKerLs7C1MkP_vbykQc', text: '### **Decoding the Structural Genome of Owl Feathe…e of developing a "Structural Genom...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'mkaVaPrIELip1MkP_82OwAg', text: '### **Bone Remodeling: A Living Algorithm for Stru…st articulated by Julius Wolff in t...[TRUNCATED]'}
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+geminiClient.ts:173 [API Success] Operation: generateContent
+geminiClient.ts:174 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'qUaVaLbxBIeX1MkPxp7puAg', text: "### **Decoding the Structural Genome: The Developm…l's acoustic silencing features is ...[TRUNCATED]"}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+citationManager.ts:135 [Citation Manager] All citations cleared
+citationManager.ts:35 [Citation Manager] Added citation 1: pku.edu.cn
+citationManager.ts:35 [Citation Manager] Added citation 2: nuaa.edu.cn
+citationManager.ts:35 [Citation Manager] Added citation 3: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 4: sharif.edu
+citationManager.ts:35 [Citation Manager] Added citation 5: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 6: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 7: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 8: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 9: owlpages.com
+citationManager.ts:35 [Citation Manager] Added citation 10: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 11: bohrium.com
+citationManager.ts:35 [Citation Manager] Added citation 12: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 13: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 14: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 15: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 16: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 17: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 18: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 19: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 20: bohrium.com
+citationManager.ts:35 [Citation Manager] Added citation 21: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 22: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 23: royalsocietypublishing.org
+citationManager.ts:35 [Citation Manager] Added citation 24: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 25: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 26: spiedigitallibrary.org
+citationManager.ts:35 [Citation Manager] Added citation 27: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 28: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 29: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 30: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 31: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 32: ismni.org
+citationManager.ts:35 [Citation Manager] Added citation 33: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 34: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 35: aps.org
+citationManager.ts:35 [Citation Manager] Added citation 36: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 37: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 38: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 39: iaac.net
+citationManager.ts:35 [Citation Manager] Added citation 40: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 41: bas.bg
+citationManager.ts:35 [Citation Manager] Added citation 42: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 43: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 44: tue.nl
+citationManager.ts:35 [Citation Manager] Added citation 45: rochester.edu
+citationManager.ts:35 [Citation Manager] Added citation 46: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 47: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 48: biorxiv.org
+citationManager.ts:35 [Citation Manager] Added citation 49: oup.com
+citationManager.ts:35 [Citation Manager] Added citation 50: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 51: pbs.org
+citationManager.ts:35 [Citation Manager] Added citation 52: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 53: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 54: semanticscholar.org
+citationManager.ts:35 [Citation Manager] Added citation 55: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 56: royalsocietypublishing.org
+citationManager.ts:35 [Citation Manager] Added citation 57: rwth-aachen.de
+citationManager.ts:35 [Citation Manager] Added citation 58: lehigh.edu
+citationManager.ts:35 [Citation Manager] Added citation 59: windtech-international.com
+citationManager.ts:35 [Citation Manager] Added citation 60: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 61: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 62: tudelft.nl
+citationManager.ts:35 [Citation Manager] Added citation 63: b-tu.de
+citationManager.ts:35 [Citation Manager] Added citation 64: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 65: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 66: sjp.ac.lk
+citationManager.ts:35 [Citation Manager] Added citation 67: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 68: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 69: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 70: semanticscholar.org
+citationManager.ts:35 [Citation Manager] Added citation 71: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 72: lu.se
+citationManager.ts:35 [Citation Manager] Added citation 73: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 74: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 75: escholarship.org
+citationManager.ts:35 [Citation Manager] Added citation 76: oup.com
+citationManager.ts:35 [Citation Manager] Added citation 77: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 78: iit.edu
+citationManager.ts:35 [Citation Manager] Added citation 79: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 80: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 81: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 82: mit.edu
+citationManager.ts:35 [Citation Manager] Added citation 83: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 84: purdue.edu
+citationManager.ts:35 [Citation Manager] Added citation 85: purdue.edu
+citationManager.ts:35 [Citation Manager] Added citation 86: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 87: mass.bio
+citationManager.ts:35 [Citation Manager] Added citation 88: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 89: escholarship.org
+citationManager.ts:35 [Citation Manager] Added citation 90: pnas.org
+citationManager.ts:35 [Citation Manager] Added citation 91: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 92: pnas.org
+citationManager.ts:35 [Citation Manager] Added citation 93: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 94: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 95: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 96: tandfonline.com
+citationManager.ts:35 [Citation Manager] Added citation 97: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 98: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 99: eurekalert.org
+citationManager.ts:35 [Citation Manager] Added citation 100: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 101: asknature.org
+citationManager.ts:35 [Citation Manager] Added citation 102: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 103: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 104: northwestern.edu
+citationManager.ts:35 [Citation Manager] Added citation 105: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 106: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 107: northwestern.edu
+citationManager.ts:35 [Citation Manager] Added citation 108: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 109: phys.org
+citationManager.ts:35 [Citation Manager] Added citation 110: southlandmarquee.com
+citationManager.ts:35 [Citation Manager] Added citation 111: physicsworld.com
+citationManager.ts:35 [Citation Manager] Added citation 112: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 113: bohrium.com
+citationManager.ts:35 [Citation Manager] Added citation 114: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 115: evolutionnews.org
+citationManager.ts:35 [Citation Manager] Added citation 116: tudelft.nl
+citationManager.ts:35 [Citation Manager] Added citation 117: rdworldonline.com
+citationManager.ts:35 [Citation Manager] Added citation 118: imexcentral.org
+citationManager.ts:35 [Citation Manager] Added citation 119: usf.edu
+citationManager.ts:35 [Citation Manager] Added citation 120: fiveable.me
+citationManager.ts:35 [Citation Manager] Added citation 121: arvindvenkatadri.com
+citationManager.ts:35 [Citation Manager] Added citation 122: designingbuildings.co.uk
+citationManager.ts:35 [Citation Manager] Added citation 123: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 124: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 125: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 126: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 127: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 128: psu.edu
+citationManager.ts:35 [Citation Manager] Added citation 129: designsociety.org
+citationManager.ts:35 [Citation Manager] Added citation 130: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 131: biomimicryne.org
+citationManager.ts:35 [Citation Manager] Added citation 132: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 133: biomimicry.org
+citationManager.ts:35 [Citation Manager] Added citation 134: biomimicry.org
+citationManager.ts:35 [Citation Manager] Added citation 135: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 136: designsociety.org
+citationManager.ts:35 [Citation Manager] Added citation 137: usc.edu
+citationManager.ts:35 [Citation Manager] Added citation 138: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 139: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 140: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 141: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 142: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 143: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 144: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 145: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 146: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 147: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 148: sciltp.com
+citationManager.ts:35 [Citation Manager] Added citation 149: accscience.com
+citationManager.ts:35 [Citation Manager] Added citation 150: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 151: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 152: tandfonline.com
+citationManager.ts:35 [Citation Manager] Added citation 153: rsc.org
+citationManager.ts:35 [Citation Manager] Added citation 154: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 155: edp-open.org
+citationManager.ts:35 [Citation Manager] Added citation 156: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 157: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 158: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 159: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 160: e3s-conferences.org
+citationManager.ts:35 [Citation Manager] Added citation 161: designsociety.org
+citationManager.ts:35 [Citation Manager] Added citation 162: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 163: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 164: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 165: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 166: fiveable.me
+citationManager.ts:35 [Citation Manager] Added citation 167: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 168: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 169: icm.edu.pl
+citationManager.ts:35 [Citation Manager] Added citation 170: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 171: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 172: injarch.com
+citationManager.ts:35 [Citation Manager] Added citation 173: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 174: mit.edu
+citationManager.ts:35 [Citation Manager] Added citation 175: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 176: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 177: mpg.de
+citationManager.ts:35 [Citation Manager] Added citation 178: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 179: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 180: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 181: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 182: frontiersin.org
+citationManager.ts:35 [Citation Manager] Added citation 183: cambridge.org
+citationManager.ts:35 [Citation Manager] Added citation 184: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 185: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 186: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 187: rsc.org
+citationManager.ts:35 [Citation Manager] Added citation 188: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 189: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 190: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 191: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 192: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 193: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 194: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 195: capes.gov.br
+citationManager.ts:35 [Citation Manager] Added citation 196: rsc.org
+citationManager.ts:35 [Citation Manager] Added citation 197: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 198: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 199: upenn.edu
+citationManager.ts:35 [Citation Manager] Added citation 200: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 201: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 202: dren.mil
+citationManager.ts:35 [Citation Manager] Added citation 203: polyu.edu.hk
+citationManager.ts:35 [Citation Manager] Added citation 204: polyu.edu.hk
+citationManager.ts:35 [Citation Manager] Added citation 205: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 206: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 207: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 208: pnas.org
+citationManager.ts:35 [Citation Manager] Added citation 209: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 210: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 211: mass.bio
+citationManager.ts:35 [Citation Manager] Added citation 212: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 213: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 214: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 215: acs.org
+citationManager.ts:35 [Citation Manager] Added citation 216: osti.gov
+citationManager.ts:35 [Citation Manager] Added citation 217: royalsocietypublishing.org
+citationManager.ts:35 [Citation Manager] Added citation 218: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 219: acs.org
+citationManager.ts:35 [Citation Manager] Added citation 220: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 221: acs.org
+citationManager.ts:35 [Citation Manager] Added citation 222: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 223: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 224: au.dk
+citationManager.ts:35 [Citation Manager] Added citation 225: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 226: mass.bio
+citationManager.ts:35 [Citation Manager] Added citation 227: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 228: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 229: iucr.org
+citationManager.ts:35 [Citation Manager] Added citation 230: wikipedia.org
+citationManager.ts:35 [Citation Manager] Added citation 231: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 232: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 233: pnas.org
+citationManager.ts:35 [Citation Manager] Added citation 234: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 235: osti.gov
+citationManager.ts:35 [Citation Manager] Added citation 236: physicsworld.com
+citationManager.ts:35 [Citation Manager] Added citation 237: dtic.mil
+citationManager.ts:35 [Citation Manager] Added citation 238: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 239: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 240: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 241: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 242: ntu.edu.sg
+citationManager.ts:35 [Citation Manager] Added citation 243: escholarship.org
+citationManager.ts:35 [Citation Manager] Added citation 244: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 245: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 246: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 247: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 248: tandfonline.com
+citationManager.ts:35 [Citation Manager] Added citation 249: northwestern.edu
+citationManager.ts:35 [Citation Manager] Added citation 250: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 251: 3ds.com
+citationManager.ts:35 [Citation Manager] Added citation 252: asknature.org
+citationManager.ts:35 [Citation Manager] Added citation 253: asknature.org
+citationManager.ts:35 [Citation Manager] Added citation 254: purdue.edu
+citationManager.ts:35 [Citation Manager] Added citation 255: globalspec.com
+citationManager.ts:35 [Citation Manager] Added citation 256: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 257: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 258: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 259: yale.edu
+citationManager.ts:35 [Citation Manager] Added citation 260: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 261: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 262: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 263: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 264: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 265: plos.org
+citationManager.ts:35 [Citation Manager] Added citation 266: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 267: plos.org
+citationManager.ts:35 [Citation Manager] Added citation 268: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 269: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 270: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 271: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 272: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 273: escholarship.org
+citationManager.ts:35 [Citation Manager] Added citation 274: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 275: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 276: yale.edu
+citationManager.ts:35 [Citation Manager] Added citation 277: pbs.org
+citationManager.ts:35 [Citation Manager] Added citation 278: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 279: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 280: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 281: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 282: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 283: plos.org
+citationManager.ts:35 [Citation Manager] Added citation 284: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 285: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 286: aip.org
+citationManager.ts:35 [Citation Manager] Added citation 287: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 288: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 289: popularmechanics.com
+citationManager.ts:35 [Citation Manager] Added citation 290: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 291: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 292: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 293: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 294: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 295: teambone.com
+citationManager.ts:35 [Citation Manager] Added citation 296: webmd.com
+citationManager.ts:35 [Citation Manager] Added citation 297: physio-pedia.com
+citationManager.ts:35 [Citation Manager] Added citation 298: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 299: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 300: numberanalytics.com
+citationManager.ts:35 [Citation Manager] Added citation 301: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 302: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 303: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 304: cellml.org
+citationManager.ts:35 [Citation Manager] Added citation 305: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 306: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 307: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 308: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 309: frontiersin.org
+citationManager.ts:35 [Citation Manager] Added citation 310: frontiersin.org
+citationManager.ts:35 [Citation Manager] Added citation 311: youtube.com
+citationManager.ts:35 [Citation Manager] Added citation 312: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 313: frontiersin.org
+citationManager.ts:35 [Citation Manager] Added citation 314: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 315: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 316: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 317: oup.com
+citationManager.ts:35 [Citation Manager] Added citation 318: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 319: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 320: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 321: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 322: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 323: bohrium.com
+citationManager.ts:35 [Citation Manager] Added citation 324: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 325: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 326: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 327: nih.gov
+citationManager.ts:35 [Citation Manager] Added citation 328: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 329: illinois.edu
+citationManager.ts:35 [Citation Manager] Added citation 330: caltech.edu
+citationManager.ts:35 [Citation Manager] Added citation 331: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 332: metalfoam.net
+citationManager.ts:35 [Citation Manager] Added citation 333: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 334: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 335: polito.it
+citationManager.ts:35 [Citation Manager] Added citation 336: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 337: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 338: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 339: mdpi.com
+citationManager.ts:35 [Citation Manager] Added citation 340: researchgate.net
+citationManager.ts:35 [Citation Manager] Added citation 341: youtube.com
+synthesis.ts:142 [Synthesis] Initialized citation manager with 341 citations
+synthesis.ts:158 Generating chapter: Of course. Based on the strategic framework and detailed implementation plan developed by agents Alpha and Beta, here is a comprehensive academic outline for the proposed research paper....
+useAppLogic.ts:160 Research failed: TypeError: citationManager.getStats is not a function
+    at getCitationInstructions (synthesis.ts:23:35)
+    at generateChapter (synthesis.ts:61:34)
+    at synthesizeReport (synthesis.ts:160:42)
+    at runIterativeDeepResearch (research.ts:167:33)
+    at async useAppLogic.ts:116:28
+(anonymous) @ useAppLogic.ts:160
+apiIntervalManager.ts:46 [API Interval] Delay capped at 20000ms (was 30000ms) for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 20000ms (mode: default)
+ [API Key Service] Delayed reset completed after 20000ms

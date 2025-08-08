@@ -12,6 +12,7 @@ type UncappedState = {
     minCycles: boolean;
     maxCycles: boolean;
     maxDebateRounds: boolean;
+    requestTimeoutMs: boolean;
 };
 
 // Default values to revert to if a setting is loaded as "uncapped"
@@ -19,12 +20,14 @@ const DEFAULT_PARAMS: ResearchParams = {
     minCycles: 7,
     maxCycles: 20,
     maxDebateRounds: 20,
+    requestTimeoutMs: 300000,
 };
 
 const UNCAPPED_VALUES: ResearchParams = {
     minCycles: 1,
     maxCycles: 99,
     maxDebateRounds: 99,
+    requestTimeoutMs: 999999, // A very large number to signify 'uncapped'
 };
 
 const ParamSettings: React.FC<ParamSettingsProps> = ({ settings, setSettings }) => {
@@ -37,6 +40,7 @@ const ParamSettings: React.FC<ParamSettingsProps> = ({ settings, setSettings }) 
             minCycles: initialParams.minCycles === UNCAPPED_VALUES.minCycles ? DEFAULT_PARAMS.minCycles : initialParams.minCycles,
             maxCycles: initialParams.maxCycles === UNCAPPED_VALUES.maxCycles ? DEFAULT_PARAMS.maxCycles : initialParams.maxCycles,
             maxDebateRounds: initialParams.maxDebateRounds === UNCAPPED_VALUES.maxDebateRounds ? DEFAULT_PARAMS.maxDebateRounds : initialParams.maxDebateRounds,
+            requestTimeoutMs: initialParams.requestTimeoutMs === UNCAPPED_VALUES.requestTimeoutMs ? DEFAULT_PARAMS.requestTimeoutMs : initialParams.requestTimeoutMs,
         };
     });
     
@@ -45,6 +49,7 @@ const ParamSettings: React.FC<ParamSettingsProps> = ({ settings, setSettings }) 
         minCycles: settings.researchParams.minCycles === UNCAPPED_VALUES.minCycles,
         maxCycles: settings.researchParams.maxCycles === UNCAPPED_VALUES.maxCycles,
         maxDebateRounds: settings.researchParams.maxDebateRounds === UNCAPPED_VALUES.maxDebateRounds,
+        requestTimeoutMs: settings.researchParams.requestTimeoutMs === UNCAPPED_VALUES.requestTimeoutMs,
     };
 
     const handleParamChange = (key: keyof ResearchParams, value: number) => {
@@ -100,6 +105,7 @@ const ParamSettings: React.FC<ParamSettingsProps> = ({ settings, setSettings }) 
                 { key: 'minCycles', label: t('minCycles'), help: t('minCyclesHelp') },
                 { key: 'maxCycles', label: t('maxCycles'), help: t('maxCyclesHelp') },
                 { key: 'maxDebateRounds', label: t('maxDebateRounds'), help: t('maxDebateRoundsHelp') },
+                { key: 'requestTimeoutMs', label: t('requestTimeoutMs'), help: t('requestTimeoutMsHelp') },
             ].map(({ key, label, help }) => (
                 <div key={key} className="space-y-2">
                     <label htmlFor={key} className="font-semibold text-gray-700 dark:text-gray-300 text-sm">{label}</label>

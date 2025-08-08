@@ -1,5 +1,5 @@
 import { apiKeyService } from './apiKeyService';
-import { AppSettings } from '../types';
+import { AppSettings, ApiIntervalConfig } from '../types';
 
 export const DEFAULT_SETTINGS: AppSettings = {
   modelOverrides: {
@@ -14,6 +14,16 @@ export const DEFAULT_SETTINGS: AppSettings = {
     minCycles: 7,
     maxCycles: 20,
     maxDebateRounds: 20,
+    requestTimeoutMs: 600000, // 600 seconds
+  },
+  apiIntervalConfig: {
+    baseDelayMs: 15000, // 基础延迟15秒 (从20秒减少到15秒)
+    dynamicAdjustment: true, // 启用动态调整
+    deepDiveMultiplier: 1.2, // DeepDive模式倍数 (从1.5减少到1.2，约减少20%)
+    balancedMultiplier: 1.1, // Balanced模式倍数 (从1.2减少到1.1)
+    quickMultiplier: 1.0, // Quick模式倍数
+    errorThreshold: 3, // 429错误阈值
+    errorMultiplier: 1.5, // 错误时的延迟倍数
   },
 };
 
@@ -33,6 +43,7 @@ class SettingsService {
         return {
           modelOverrides: { ...DEFAULT_SETTINGS.modelOverrides, ...parsed.modelOverrides },
           researchParams: { ...DEFAULT_SETTINGS.researchParams, ...parsed.researchParams },
+          apiIntervalConfig: { ...DEFAULT_SETTINGS.apiIntervalConfig, ...parsed.apiIntervalConfig },
         };
       }
     } catch (e) {
@@ -45,6 +56,7 @@ class SettingsService {
     const toStore: AppSettings = {
         modelOverrides: newSettings.modelOverrides || this.settings.modelOverrides,
         researchParams: newSettings.researchParams || this.settings.researchParams,
+        apiIntervalConfig: newSettings.apiIntervalConfig || this.settings.apiIntervalConfig,
     };
     try {
       localStorage.setItem('k-research-settings', JSON.stringify(toStore));

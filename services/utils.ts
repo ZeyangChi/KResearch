@@ -1,20 +1,31 @@
 export const parseJsonFromMarkdown = (text: string): any => {
-    const fenceRegex = /^```(\w*)?\s*\n?(.*?)\n?\s*```$/s;
-    const match = text.match(fenceRegex);
-    const jsonStr = match ? match[2].trim() : text.trim();
+    if (!text || text.trim() === '') {
+        console.warn("parseJsonFromMarkdown received empty or null text.");
+        return null;
+    }
+
+    // Find the start of the JSON block (either ```json or the first {)
+    let jsonStr = text;
+    const codeBlockMatch = text.match(/```(json)?\s*([\s\S]*?)\s*```/);
+    if (codeBlockMatch) {
+        jsonStr = codeBlockMatch[2];
+    }
+
+    const firstBrace = jsonStr.indexOf('{');
+    const lastBrace = jsonStr.lastIndexOf('}');
+
+    if (firstBrace === -1 || lastBrace === -1 || lastBrace < firstBrace) {
+        console.error("Failed to find a valid JSON object within the text.", "Original text:", text);
+        return null;
+    }
+    
+    // Extract the content between the first and last brace
+    jsonStr = jsonStr.substring(firstBrace, lastBrace + 1);
+
     try {
         return JSON.parse(jsonStr);
     } catch (e) {
-        console.error("Failed to parse JSON response:", e, "Raw text:", text);
-        try {
-            const openBrace = jsonStr.indexOf('{');
-            const closeBrace = jsonStr.lastIndexOf('}');
-            if (openBrace !== -1 && closeBrace > openBrace) {
-                return JSON.parse(jsonStr.substring(openBrace, closeBrace + 1));
-            }
-        } catch (lenientError) {
-             console.error("Lenient JSON parse also failed:", lenientError);
-        }
-        return null;
+        console.error("Failed to parse JSON response, even after aggressive extraction.", e, "Original text:", text, "Attempted JSON string:", jsonStr);
+        return null; // Return null if all attempts fail
     }
 };

@@ -1,12 +1,10 @@
-
-
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { NotificationProvider } from './contextx/NotificationContext';
 import { LanguageProvider, useLanguage } from './contextx/LanguageContext';
 import GlassCard from './components/GlassCard';
 import LiquidButton from './components/LiquidButton';
 import ResearchProgress from './components/ResearchProgress';
+import OutlineDebateProgress from './components/OutlineDebateProgress';
 import FinalReport from './components/FinalReport';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -19,6 +17,24 @@ import RoleSelector from './components/RoleSelector';
 import { useAppLogic } from './hooks/useAppLogic';
 import { ResearchMode } from './types';
 import Spinner from './components/Spinner';
+import MarkdownRenderer from './components/report/MarkdownRenderer';
+
+const AcademicOutlinePreview: React.FC<{ outline: string; onApprove: () => void; onRegenerate: () => void; }> = ({ outline, onApprove, onRegenerate }) => {
+    const { t } = useLanguage();
+    return (
+        <div className="animate-fade-in space-y-4 p-6 bg-glass-light dark:bg-glass-dark rounded-2xl">
+            <h2 className="text-2xl font-bold text-center">{t('academicOutline')}</h2>
+            <div className="max-h-96 overflow-y-auto p-4 rounded-xl border border-border-light dark:border-border-dark bg-white/30 dark:bg-black/20">
+                <MarkdownRenderer report={outline} />
+            </div>
+            <div className="flex justify-center gap-4">
+                <LiquidButton onClick={onApprove} className="w-full sm:w-auto">{t('approveAndStart')}</LiquidButton>
+                <LiquidButton onClick={onRegenerate} disabled className="w-full sm:w-auto bg-gray-500/30 hover:bg-gray-500/40 border-gray-500/50">{t('regenerateOutline')}</LiquidButton>
+            </div>
+            <p className="text-xs text-center text-gray-500 dark:text-gray-400">{t('regenerateDisabledNote')}</p>
+        </div>
+    );
+};
 
 const App: React.FC = () => {
     return (
@@ -39,7 +55,7 @@ const AppContent: React.FC = () => {
       query, setQuery, guidedQuery, setGuidedQuery, selectedFile, researchUpdates, finalData, mode, setMode, appState,
       clarificationHistory, clarificationLoading, startClarificationProcess, handleAnswerSubmit,
       handleStopResearch, handleFileChange, handleRemoveFile, handleReset, fileInputRef,
-      isVisualizing, visualizedReportHtml, handleVisualizeReport, handleCloseVisualizer, handleSkipClarification,
+      isVisualizing, visualizedReportHtml, handleVisualizeReport, handleCloseVisualizer,
       isRegenerating, isRewriting, handleRegenerateReport, handleReportRewrite,
       isSettingsOpen, setIsSettingsOpen,
       isVisualizerOpen, handleVisualizerFeedback,
@@ -49,7 +65,7 @@ const AppContent: React.FC = () => {
       handleNavigateVersion,
       handleTranslateReport, translationLoading,
       roles, selectedRoleId, setSelectedRoleId, saveRole, deleteRole, isRoleManagerOpen, setIsRoleManagerOpen,
-      academicOutline, isGeneratingOutline
+      academicOutline, isGeneratingOutline, debateUpdates, handleApproveOutline, handleAcknowledgeClarification
   } = useAppLogic();
 
   const [isLogVisible, setIsLogVisible] = useState<boolean>(true);
@@ -75,8 +91,11 @@ const AppContent: React.FC = () => {
   }, [appState, finalData]);
 
   const handleStart = () => {
-    startClarificationProcess(guidedQuery);
+    if (query.trim()) {
+        startClarificationProcess(guidedQuery);
+    }
   };
+
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -181,14 +200,29 @@ const AppContent: React.FC = () => {
             </div>
           )}
           
-          {appState === 'clarifying' && (<ClarificationChat history={clarificationHistory} onAnswerSubmit={handleAnswerSubmit} onSkip={handleSkipClarification} isLoading={clarificationLoading}/>)}
+          {appState === 'clarifying' && (
+              <ClarificationChat
+                  history={clarificationHistory}
+                  onAnswerSubmit={handleAnswerSubmit}
+                  onSkip={handleAcknowledgeClarification}
+                  isLoading={clarificationLoading}
+                  onAcknowledge={handleAcknowledgeClarification}
+              />
+          )}
 
           {appState === 'outlining' && (
-            <div className="flex flex-col items-center justify-center gap-3 animate-fade-in p-8">
-                <Spinner />
-                <span className="text-lg font-semibold">正在生成学术大纲...</span>
-                <span className="text-sm text-gray-600 dark:text-gray-400">Alpha和Beta智能体正在协作设计学术论文结构</span>
-            </div>
+            <OutlineDebateProgress
+              debateUpdates={debateUpdates}
+              isDebating={isGeneratingOutline}
+            />
+          )}
+
+          {appState === 'awaiting_approval' && academicOutline && (
+               <AcademicOutlinePreview
+                   outline={academicOutline}
+                   onApprove={handleApproveOutline}
+                   onRegenerate={() => { /* TODO: Implement regeneration logic */ }}
+               />
           )}
 
           {appState === 'researching' && (<LiquidButton onClick={handleStopResearch} className="w-full bg-red-500/30 hover:bg-red-500/40 border-red-500/50">{t('stopResearch')}</LiquidButton>)}

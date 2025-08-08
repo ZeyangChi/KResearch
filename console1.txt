@@ -1,0 +1,134 @@
+?plugins=typography:66 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ ?plugins=typography:66
+react-dom_client.js?v=f966d72e:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: Object
+generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent:1  Failed to load resource: net::ERR_CONNECTION_CLOSED
+geminiClient.ts:184 [API Call Failed: Attempt 1/6] Operation: 'generateContent' with key ...iWEs. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 2/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}config: {tools: Array(1)}contents: "Concisely summarize key information for the query: \"你是一位精通力学与仿生结构设计的专家。我正在构建一个类比于“人类基因组计划”和“材料基因组计划”的“结构基因”研究体系。我们将“结构基因”定义为标准化、可参数化的结构特征单元，这些单元能够直接影响结构的宏观物理性能，尤其是力学性能。\n本研究提出了一个包含五个正交维度的结构基因分类框架，分别为：\n拓扑基因（Topology Genes）\n几何基因（Geometric Genes）\n构型基因（Architectural Genes）\n组分基因（Constituent Genes）\n工艺基因（Processing Genes）\n这五类结构基因从不同层面描述决定结构性能的关键信息，共同构建出系统化的“结构基因图谱”。\n目前，我已完成论文前两章的大部分撰写工作（见manuscript），下一步将进入第三部分，即案例分析：\n请你围绕三个具有代表性的生物原型进行结构设计案例分析，目标如下：\n分析其结构设计中涉及的关键结构基因；\n明确哪些基因主导了特定力学性能（如刚度、强度、韧性、多功能性等）；\n阐明各类基因的相对作用强度（主要/次要）；\n如有可能，解释其多基因协同机制。\n请优先参考卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。\""model: "gemini-2.5-pro"[[Prototype]]: Object
+geminiClient.ts:132  POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent net::ERR_CONNECTION_CLOSED
+executeWithRetry @ geminiClient.ts:132
+geminiClient.ts:184 [API Call Failed: Attempt 2/6] Operation: 'generateContent' with key ...HmE0. Error: Failed to fetch
+executeWithRetry @ geminiClient.ts:184
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 3/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: 'Concisely summarize key information for the query:…卢天健教授团队的代表性研究工作，也可适当引用其他与结构基因分类紧密相关的高质量文献作为补充依据。"', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: '2puUaKClKv--qtsPt_zp4QU', text: ''}
+useAppLogic.ts:320 Initial search completed. Adding 5000ms delay before clarification to prevent API rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+useAppLogic.ts:325 Forcing API key rotation before clarification phase...
+useAppLogic.ts:326 [DEBUG] Keys before rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Current Index: 2
+useAppLogic.ts:328 [DEBUG] Keys after rotation: ["AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs","AIzaSyBRASrWKpTlv_Tt1W_wE5mVwwMOh9sHmE0","AIzaSyDkW3HAYyRwZyEX2RVIHr1vDfdCBtyGrtY"], Next Index: 0, Key to be used: AIzaSyDWD53N2Fz52SiQKYZEn4XRR6QfZANiWEs
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(1), config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '6ZuUaP3uI_-ImtkPld3yYQ', text: 'Would you like the case studies to include the pea…unctionality, or a different dominant gene type)?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…ctionality, or a different dominant gene type)?"\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: '7ZuUaNOmM7WjqtsP1eTOoAo', text: '{"content": "Would you like the case studies to in…ferent dominant gene type)?", "type": "question"}'}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(3), config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'HpyUaKHADLuRmtkPtfmZ8AU', text: 'Would you like the three representative biological…ther specific functions or structural gene types?'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…er specific functions or structural gene types?"\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'IpyUaLKlJJuJmtkP6N-AgQY', text: '{"content": "Would you like the three representati…s or structural gene types?", "type": "question"}'}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...iWEs
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: Array(5), config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'SpyUaJDPILfNqtsPgpe5sQs', text: 'The user wants to conduct case studies on three re…d identify key structural genes, de...[TRUNCATED]'}
+clarification.ts:115 Clarification Step 1 completed. Adding 3000ms delay before Step 2 to prevent rate limiting (mode: DeepDive)...
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+clarification.ts:137 Starting Clarification Step 2 (JSON formatting)...
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent, Attempt: 1/6, Key: ...HmE0
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-flash', contents: 'Analyze the following text and classify it.\nYour r…phasis on the underlying mechanical principles."\n', config: {…}}
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-flash', responseId: 'T5yUaNiHEsD5qtsP9u-KcA', text: '{"content":"The user wants to conduct case studies…analysis should identify key struct...[TRUNCATED]'}
+researchContext.ts:16 [Research Context] Mode set to: DeepDive
+geminiClient.ts:109 [API Request] URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent, Attempt: 1/6, Key: ...GrtY
+geminiClient.ts:110 [API Request] Parameters: {model: 'gemini-2.5-pro', contents: {…}, config: {…}}
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+geminiClient.ts:163 [API Success] Operation: generateContent
+geminiClient.ts:164 [API Response]: {candidates: Array(1), usageMetadata: {…}, modelVersion: 'gemini-2.5-pro', responseId: 'U5yUaLrbDrDDqtsPlJaA4QU', text: ''}
+utils.ts:8 Failed to parse JSON response: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parseJsonFromMarkdown (utils.ts:6:21)
+    at generateAcademicOutline (academicOutline.ts:188:32) Raw text: 
+parseJsonFromMarkdown @ utils.ts:8
+generateAcademicOutline @ academicOutline.ts:188
+await in generateAcademicOutline
+(anonymous) @ useAppLogic.ts:234
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+useAppLogic.ts:244 Academic outline generation failed: TypeError: Cannot read properties of null (reading 'thought')
+    at generateAcademicOutline (academicOutline.ts:193:37)
+(anonymous) @ useAppLogic.ts:244
+Promise.catch
+(anonymous) @ useAppLogic.ts:239
+react_stack_bottom_frame @ react-dom_client.js?v=f966d72e:17486
+runWithFiberInDEV @ react-dom_client.js?v=f966d72e:1485
+commitHookEffectListMount @ react-dom_client.js?v=f966d72e:8460
+commitHookPassiveMountEffects @ react-dom_client.js?v=f966d72e:8518
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9887
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9881
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9984
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=f966d72e:9868
+commitPassiveMountOnFiber @ react-dom_client.js?v=f966d72e:9899
+flushPassiveEffects @ react-dom_client.js?v=f966d72e:11302
+(anonymous) @ react-dom_client.js?v=f966d72e:11060
+performWorkUntilDeadline @ react-dom_client.js?v=f966d72e:36
+apiIntervalManager.ts:41 [API Interval] Calculated delay: 30000ms for mode: DeepDive
+apiKeyService.ts:142 [API Key Service] Scheduled delayed reset in 30000ms (mode: default)
+apiKeyService.ts:139 [API Key Service] Delayed reset completed after 30000ms

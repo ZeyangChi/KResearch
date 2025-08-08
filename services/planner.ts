@@ -7,10 +7,15 @@ import { ResearchUpdate, AgentPersona, ResearchMode, FileData, Role } from '../t
 import { getPlannerPrompt, plannerTurnSchema } from './plannerPrompt';
 import { apiKeyService } from './apiKeyService';
 
+export interface SearchQueryObject {
+    query: string;
+    targetSection: string;
+}
+
 interface PlannerTurn {
     thought: string;
     action: 'search' | 'continue_debate' | 'finish';
-    queries?: string[] | null;
+    queries?: SearchQueryObject[] | null;
     finish_reason?: string | null;
 }
 
@@ -27,7 +32,7 @@ export const runDynamicConversationalPlanner = async (
     searchCycles: number,
     signal: AbortSignal,
     academicOutline?: string | null
-): Promise<{ search_queries: string[], should_finish: boolean, finish_reason?: string }> => {
+): Promise<{ search_queries: SearchQueryObject[], should_finish: boolean, finish_reason?: string }> => {
     const { minCycles, maxDebateRounds, maxCycles } = settingsService.getSettings().researchParams;
 
     const searchHistoryText = researchHistory.filter(h => h.type === 'search').map(h => (Array.isArray(h.content) ? h.content : [h.content]).join(', ')).join('; ');
@@ -152,7 +157,14 @@ export const runDynamicConversationalPlanner = async (
         }
         
         if (effectiveAction === 'search' && parsedResponse.queries && parsedResponse.queries.length > 0) {
-            return { should_finish: false, search_queries: parsedResponse.queries };
+            // Ensure all queries are in the correct new format, even if the AI makes a mistake
+            const validatedQueries = parsedResponse.queries.map(q => {
+                if (typeof q === 'string') {
+                    return { query: q, targetSection: 'General' }; // Fallback for old format
+                }
+                return q;
+            });
+            return { should_finish: false, search_queries: validatedQueries };
         }
         
         // if we reach here, action is 'continue_debate'
