@@ -104,7 +104,7 @@ const ClarificationChat: React.FC<ClarificationChatProps> = ({ history, onAnswer
                         {isLoading ? t('waiting') : t('sendAnswer')}
                     </LiquidButton>
                     <LiquidButton type="button" onClick={onSkip} disabled={isLoading} className="w-full">
-                        {t('skipAndGenerateOutline')}
+                        {t('skip_and_generate_outline')}
                     </LiquidButton>
                 </div>
             </form>

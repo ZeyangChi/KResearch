@@ -34,7 +34,7 @@
   "sendAnswer": "发送回答",
   "skipAndStart": "跳过并开始研究",
   "acknowledgeAndProceed": "我已知晓并继续",
-  "skipAndGenerateOutline": "跳过并生成大纲",
+  "skip_and_generate_outline": "跳过并生成大纲",
   "thinking": "思考中...",
   "waiting": "等待中...",
   "researchHistory": "研究历史",
